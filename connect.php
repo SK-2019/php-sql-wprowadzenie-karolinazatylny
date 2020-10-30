@@ -1,16 +1,7 @@
 <?php
-
-$servername = "mysql-karolinazatylny.alwaysdata.net";
-$username = "217224";
-$password = "karolcia9";
-$dbanme = "karolinazatylny_123";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
+$conn= new mysqli('mysql-karolinazatylny.alwaysdata.net','217224','karolcia9','karolinazatylny_123');
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+    die("connection failed: ".mysqli_connect_error());
 
+}
 ?>
