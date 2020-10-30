@@ -1,6 +1,6 @@
 <?php
     $conn = new mysqli("mysql-karolinazatylny.alwaysdata.net","217224","karolcia9","karolinazatylny_123");  
-    $result = $conn->query('SELECT * FROM pracownicy');
+    $result = $conn->query('SELECT * FROM pracownicy where imie like "%a"');
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
@@ -15,7 +15,7 @@
 
         echo("</table>");
         $conn = new mysqli("mysql-karolinazatylny.alwaysdata.net","217224","karolcia9","karolinazatylny_123");  
-    $result = $conn->query('SELECT * FROM pracownicy where imie like "%a"'); 
+    $result = $conn->query('SELECT * FROM pracownicy'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
@@ -30,7 +30,7 @@
 
         echo("</table>");
         $conn = new mysqli("mysql-karolinazatylny.alwaysdata.net","217224","karolcia9","karolinazatylny_123");  
-    $result = $conn->query('SELECT * FROM pracownicy where (dzial=1 or dzial=3)'); 
+    $result = $conn->query('SELECT * FROM pracownicy where (dzial=2 or dzial=3)'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
@@ -64,7 +64,7 @@
 
         echo("</table>");
         $conn = new mysqli("mysql-karolinazatylny.alwaysdata.net","217224","karolcia9","karolinazatylny_123");  
-    $result = $conn->query('SELECT * FROM pracownicy where zarobki>=40'); 
+    $result = $conn->query('SELECT * FROM pracownicy where zarobki>=35'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
         echo("<th>Imie</th>");
