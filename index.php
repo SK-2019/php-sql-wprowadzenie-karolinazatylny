@@ -26,6 +26,7 @@
 
         echo("</table>");
         require("connect.php");  
+        echo("<h2>Zadanie 2</h2>");
     $result = $conn->query("SELECT * FROM pracownicy"); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -41,6 +42,7 @@
 
         echo("</table>");
         require("connect.php");  
+        echo("<h2>Zadanie 3</h2>");
     $result = $conn->query('SELECT * FROM pracownicy where (dzial=1 or dzial=3)'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -58,6 +60,7 @@
 
         echo("</table>");
         require("connect.php");  
+        echo("<h2>Zadanie 4</h2>");
     $result = $conn->query('SELECT * FROM pracownicy where dzial=3');
         echo("<table border=1>");
         echo("<th>Id</th>"); 
@@ -75,6 +78,7 @@
 
         echo("</table>");
         require("connect.php");  
+        echo("<h2>Zadanie 5</h2>");
     $result = $conn->query('SELECT * FROM pracownicy where zarobki>=40'); 
         echo("<table border=1>");
         echo("<th>Id</th>"); 
