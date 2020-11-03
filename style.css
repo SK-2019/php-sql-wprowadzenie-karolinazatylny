@@ -1,6 +1,9 @@
 body {
     background-color: lightgrey;
-    }
-table{
+}
+h1 {
+    color: lightskyblue
+}
+table {
     color: palevioletred;
 }
