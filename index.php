@@ -10,6 +10,7 @@
 
 <h1>✿ Karolina Zatylny ✿</h1>
 <h3><a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></h3>
+<hr>
 
 <?php
 

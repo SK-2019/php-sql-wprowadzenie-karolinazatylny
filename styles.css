@@ -40,6 +40,10 @@ th{
     color: rgb(55, 51, 82);
     text-shadow: 0px 1px 1px rgba(59, 59, 59, 0.616);
 }
+hr{
+    border: 1px solid rgb(53, 30, 99);
+}
+
 tr:nth-child(even){background-color:rgb(168, 160, 211);}
 tr:hover{background-color:lavender;
 }
