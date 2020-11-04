@@ -8,10 +8,7 @@
 </head>
 <body>
 
-<h1>Karolina Zatylny nr30</h1>
-
-</body>
-<body>
+<h1>Karolina Zatylny nr 30</h1>
 
 <?php
 
