@@ -100,13 +100,12 @@
         echo("</table>");
     require("connect.php");
     echo("<h2>ZADANIE 6: SELECT avg(zarobki) as srednia_zarobkow FROM `pracownicy`, `organizacja` WHERE dzial = id_org</h2>");
-    $result = $conn->query('SELECT avg(zarobki) as srednia_zarobkow FROM `pracownicy`, `organizacja` WHERE dzial = id_org'); 
+    $result = $conn->query('SELECT avg(zarobki) as az FROM `pracownicy`, `organizacja` WHERE dzial = id_org'); 
         echo("<table border=1>");
         echo("<th>Średnia_Zarobków</th>");
             while($row=$result->fetch_assoc()){ 
                 echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
-
+                    echo("<td>".$row["az"]."</td>");
                 echo("</tr>");
             }
 
