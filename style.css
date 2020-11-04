@@ -1,26 +1,12 @@
 body {
     background-color: lightgrey;
 }
-h1 {
-    color: darkslateblue;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
-}
 h2 {
     color: darkslateblue;
-    margin-bottom: 10px;
-    margin-top: 20px;
     font-size: 20px;
-    text-align: center;
+    font-style: italic;
+    
 }
 table {
     color: palevioletred;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 500px;
-    font-size: 30px;
-    text-align: center;
-    
 }
