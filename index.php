@@ -11,8 +11,9 @@
 <?php
 
     require("connect.php");
-    echo("<h2>ZADANIE 1: SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org'</h2>");
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia,nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
+    echo("<h2>ZADANIE 1: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM 'pracownicy',
+     'organizacja' WHERE dzial = id_org </h2>");
+    $result = $conn->query("SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM 'pracownicy', 'organizacja' WHERE dzial = id_org");
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
