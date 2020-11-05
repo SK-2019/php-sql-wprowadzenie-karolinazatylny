@@ -8,9 +8,11 @@
     </head>
 <body>
 
-<h3><a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></h3>
-<h3><a href="agregat.php"><b>FUNKCJE AGREGUJĄCE</b></a></h3>
-<h3><a href="orgPracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a></h3>
+<h3>
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
+    <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
+    <a href="orgPracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a>
+</h3>
 <h1>✿ Karolina Zatylny ✿</h1>
 <hr>
 
