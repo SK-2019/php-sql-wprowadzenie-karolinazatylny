@@ -12,7 +12,8 @@
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
     <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
     <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
-    <a href="pracownicy.php"><b>PRACOWNICY</b></a>
+    <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
+    <a href="dataiczas.php"><b>DATA I CZAS</b></a> 
 </h3>
 <h1>✿ Karolina Zatylny ✿</h1>
 <hr>
@@ -191,8 +192,8 @@
 
                 echo("</table>");   
                 require("connect.php");
-                echo("<h2>ZADANIE 14: SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja group by dzial HAVING sum(zarobki)<28</h2>");
-                $result = $conn->query('SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja group by dzial HAVING sum(zarobki)<28');
+                echo("<h2>ZADANIE 14: SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28</h2>");
+                $result = $conn->query('SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28');
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Suma_zarobków</th>");
