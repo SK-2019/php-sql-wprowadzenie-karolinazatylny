@@ -21,8 +21,9 @@
 <?php
 
     require("connect.php");
-    echo("<h2>ZADANIE 1: SELECT * FROM pracownicy, organizacja WHERE dzial=2</h2>");
-    $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial=2 AND dzial=id_org');
+    $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=2 AND dzial=id_org';
+    echo("<h2>ZADANIE 1: $sql</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -37,8 +38,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 2: SELECT * FROM pracownicy, organizacja where (dzial=1 or dzial=2)</h2>");  
-    $result = $conn->query('SELECT * FROM pracownicy, organizacja where dzial=id_org AND (dzial=1 or dzial=2)'); 
+    $sql='SELECT * FROM pracownicy, organizacja where dzial=id_org AND (dzial=1 or dzial=2)';
+    echo("<h2>ZADANIE 2: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -54,8 +56,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 3: SELECT * FROM pracownicy, organizacja WHERE zarobki<30</h2>");  
-    $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE zarobki<30 AND dzial=id_org'); 
+    $sql='SELECT * FROM pracownicy, organizacja WHERE zarobki<30 AND dzial=id_org';
+    echo("<h2>ZADANIE 3: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>Imie</th>");
