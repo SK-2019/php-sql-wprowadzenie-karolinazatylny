@@ -21,8 +21,9 @@
 <?php
 
     require("connect.php");
-    echo("<h2>ZADANIE 1: SELECT sum(zarobki) as suma_zarobkow FROM pracownicy</h2>");
-    $result = $conn->query('SELECT sum(zarobki) as sz FROM pracownicy'); 
+    $sql='SELECT sum(zarobki) as sz FROM pracownicy';
+    echo("<h2>ZADANIE 1: $sql</h2>");
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Suma_Zarobków</th>");
             while($row=$result->fetch_assoc()){ 
@@ -35,8 +36,9 @@
 
         echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 2: SELECT sum(zarobki) as suma_zarobki FROM pracownicy WHERE imie like '%a'</h2>");
-        $result = $conn->query('SELECT sum(zarobki) as sz FROM pracownicy WHERE imie like "%a"'); 
+        $sql='SELECT sum(zarobki) as sz FROM pracownicy WHERE imie like "%a"';
+        echo("<h2>ZADANIE 2: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Suma_Zarobków</th>");
                 while($row=$result->fetch_assoc()){ 
@@ -49,8 +51,9 @@
 
             echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 3: SELECT sum(zarobki) as suma_zarobki FROM pracownicy WHERE (imie not like 'a%') AND (dzial=2 OR dzial=3)</h2>");
-        $result = $conn->query('SELECT sum(zarobki) as sz FROM pracownicy WHERE (imie not like "a%") AND (dzial=2 OR dzial=3)'); 
+        $sql='SELECT sum(zarobki) as sz FROM pracownicy WHERE (imie not like "a%") AND (dzial=2 OR dzial=3)';
+        echo("<h2>ZADANIE 3: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Suma_zarobków</th>");
                 while($row=$result->fetch_assoc()){ 
