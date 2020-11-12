@@ -75,8 +75,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 4: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and dzial = 3</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and dzial = 3');
+    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and dzial = 3';
+    echo("<h2>ZADANIE 4: $sql</h2>");  
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
@@ -93,8 +94,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 5: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and zarobki>=35</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and zarobki>=35'); 
+    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and zarobki>=35';
+    echo("<h2>ZADANIE 5: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
@@ -111,8 +113,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 6: SELECT avg(zarobki) as srednia_zarobkow FROM pracownicy, organizacja WHERE dzial = id_org</h2>");
-    $result = $conn->query('SELECT avg(zarobki) as az FROM pracownicy, organizacja WHERE dzial = id_org'); 
+    $sql='SELECT avg(zarobki) as az FROM pracownicy, organizacja WHERE dzial = id_org';
+    echo("<h2>ZADANIE 6: $sql</h2>");
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Średnia_Zarobków</th>");
             while($row=$result->fetch_assoc()){ 
@@ -125,8 +128,9 @@
 
         echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 7: SELECT sum(zarobki) as suma_zarobki FROM pracownicy, organizacja WHERE (dzial = id_org) and (zarobki>45)</h2>");
-        $result = $conn->query('SELECT sum(zarobki) as sz FROM pracownicy, organizacja WHERE (dzial = id_org) and (zarobki>45)'); 
+        $sql='SELECT sum(zarobki) as sz FROM pracownicy, organizacja WHERE (dzial = id_org) and (zarobki>45)';
+        echo("<h2>ZADANIE 7: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Suma_Zarobków</th>");
                 while($row=$result->fetch_assoc()){ 
