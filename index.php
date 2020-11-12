@@ -39,8 +39,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 2: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org'); 
+    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org';
+    echo("<h2>ZADANIE 2: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
@@ -55,8 +56,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 3: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=2 or dzial=1)</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=2 or dzial=1)'); 
+    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=2 or dzial=1)';
+    echo("<h2>ZADANIE 3: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
