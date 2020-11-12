@@ -55,7 +55,6 @@
        
             echo("</table>");
             require("connect.php");
-            echo("<hr />");
             echo("<h2>ZADANIE 3: SELECT sum(YEAR(CURDATE())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org</h2>");
             $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org');
                 echo("<table border>");
@@ -67,7 +66,6 @@
                    }
            echo("</table>");
            require("connect.php");
-           echo("<hr />");
            echo("<h2>ZADANIE 4: SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial='handel'</h2>");
            $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="handel"');
                echo("<table border>");
@@ -78,9 +76,19 @@
                        echo("</tr>");
                   }
           echo("</table>");
+          require("connect.php");
+          echo("<h2>ZADANIE 5: SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie like '%a'</h2>");
+          $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie like "%a"');
+              echo("<table border>");
+              echo("<th>Wiek_kobiet</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["wiek"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
 
           require("connect.php");
-          echo("<hr />");
           echo("<h2>ZADANIE 6: SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like '%a'</h2>");
           $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like "%a"');
               echo("<table border>");
@@ -88,6 +96,20 @@
                   while($row=$result->fetch_assoc()){ 
                       echo("<tr>");
                       echo("<td>".$row["wiek"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
+
+        require("connect.php");
+          echo("<h2>ZADANIE 7: SELECT dzial, avg(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial</h2>");
+          $result = $conn->query('SELECT dzial, avg(YEAR(CURDATE()) - YEAR(data_urodzenia)) as a, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial');
+              echo("<table border>");
+              echo("<th>Wiek_mężczyzn</th>");
+              echo("<th>Średnia_wiek</th>");
+              echo("<th>Nazwa_działu</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["dzial"]."</td><td>".$row["a"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
                       echo("</tr>");
                  }
          echo("</table>");
