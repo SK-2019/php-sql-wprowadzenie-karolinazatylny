@@ -53,9 +53,44 @@
                        echo("</tr>");
                    }
        
-               echo("</table>");
-               
- 
+            echo("</table>");
+            require("connect.php");
+            echo("<hr />");
+            echo("<h2>ZADANIE 3: SELECT sum(YEAR(CURDATE())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org</h2>");
+            $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org');
+                echo("<table border>");
+                echo("<th>Wiek_wszystkich_pracowników</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["wiek"]."</td>");                    
+                        echo("</tr>");
+                   }
+           echo("</table>");
+           require("connect.php");
+           echo("<hr />");
+           echo("<h2>ZADANIE 4: SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial='handel'</h2>");
+           $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="handel"');
+               echo("<table border>");
+               echo("<th>Wiek_pracowników_handel</th>");
+                   while($row=$result->fetch_assoc()){ 
+                       echo("<tr>");
+                       echo("<td>".$row["wiek"]."</td>");                    
+                       echo("</tr>");
+                  }
+          echo("</table>");
+
+          require("connect.php");
+          echo("<hr />");
+          echo("<h2>ZADANIE 6: SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like '%a'</h2>");
+          $result = $conn->query('SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like "%a"');
+              echo("<table border>");
+              echo("<th>Wiek_mężczyzn</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["wiek"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
 
 ?>
 
