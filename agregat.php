@@ -191,8 +191,9 @@
 
                 echo("</table>");   
                 require("connect.php");
-                echo("<h2>ZADANIE 13: SELECT avg(zarobki) as az, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</h2>");
-                $result = $conn->query('SELECT avg(zarobki) as az, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
+                $sql='SELECT avg(zarobki) as az, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec';
+                echo("<h2>ZADANIE 13: $sql</h2>");
+                $result = $conn->query($sql); 
                 echo("<table border=1>");
                 echo("<th>Średnia_zarobków</th>");
                 echo("<th>Płeć</th>");
@@ -204,8 +205,9 @@
 
                 echo("</table>");   
                 require("connect.php");
-                echo("<h2>ZADANIE 14: SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28</h2>");
-                $result = $conn->query('SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28');
+                $sql='SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28';
+                echo("<h2>ZADANIE 14: $sql</h2>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Suma_zarobków</th>");
@@ -216,8 +218,9 @@
 
                 echo("</table>");
                 require("connect.php");
-                echo("<h2>ZADANIE 15: SELECT avg(zarobki) as srednia_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like '%a') group by dzial having avg(zarobki)>30</h2>");
-                $result = $conn->query('SELECT avg(zarobki) as az, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30');
+                $sql='SELECT avg(zarobki) as az, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30'
+                echo("<h2>ZADANIE 15: $sql</h2>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Średnia_zarobków</th>");
@@ -228,8 +231,9 @@
 
                 echo("</table>");
                 require("connect.php");
-                echo("<h2>ZADANIE 16: SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2</h2>");
-                $result = $conn->query('SELECT count(imie) as i, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2');
+                $sql='SELECT count(imie) as i, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2';
+                echo("<h2>ZADANIE 16: $sql</h2>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Ilość</th>");
                 echo("<th>Nazwa_działu</th>");
