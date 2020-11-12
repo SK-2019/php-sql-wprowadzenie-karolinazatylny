@@ -21,8 +21,9 @@
 <?php
 
     require("connect.php");
-    echo("<h2>ZADANIE 1: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org</h2>");
-    $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org');
+    $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org';
+    echo("<h2>ZADANIE 1: $sql</h2>");
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
@@ -35,8 +36,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 2: SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (dzial=1 or dzial=4)</h2>");  
-    $result = $conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (dzial=1 or dzial=4)'); 
+    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (dzial=1 or dzial=4)';
+    echo("<h2>ZADANIE 2: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Zarobki</th>");
@@ -51,8 +53,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 3: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie like '%a')</h2>");  
-    $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) and (imie like "%a")'); 
+    $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) and (imie like "%a")';
+    echo("<h2>ZADANIE 3: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Nazwa_Działu</th>");
@@ -67,8 +70,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 4: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie not like '%a')</h2>");  
-    $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie not like "%a")');
+    $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie not like "%a")';
+    echo("<h2>ZADANIE 4: $sql</h2>");  
+    $result = $conn->query($sql);
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Nazwa_Działu</th>");
@@ -83,8 +87,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 5: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) order by imie desc</h2>");  
-    $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) order by imie desc'); 
+    $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) order by imie desc';
+    echo("<h2>ZADANIE 5: $sql</h2>");  
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Nazwa_Działu</th>");
@@ -99,8 +104,9 @@
 
         echo("</table>");
     require("connect.php");
-    echo("<h2>ZADANIE 6: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (dzial=3) order by imie asc</h2>");
-    $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (dzial=3) order by imie asc'); 
+    $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (dzial=3) order by imie asc';
+    echo("<h2>ZADANIE 6: $sql</h2>");
+    $result = $conn->query($sql); 
         echo("<table border=1>");
         echo("<th>Imie</th>");
         echo("<th>Nazwa_Działu</th>");
@@ -114,8 +120,9 @@
 
         echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 7: SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie like '%a') order by imie asc</h2>");
-        $result = $conn->query('SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie like "%a") order by imie asc'); 
+        $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie like "%a") order by imie asc';
+        echo("<h2>ZADANIE 7: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Imie</th>");
             echo("<th>Nazwa_Działu</th>");
@@ -129,8 +136,9 @@
 
             echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 8: SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja where (dzial=id_org) AND (imie like '%a') AND (dzial=1 OR dzial=3) order by zarobki asc</h2>");
-        $result = $conn->query('SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja where (dzial=id_org) AND (imie like "%a") AND (dzial=1 OR dzial=3) order by zarobki asc'); 
+        $sql='SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja where (dzial=id_org) AND (imie like "%a") AND (dzial=1 OR dzial=3) order by zarobki asc';
+        echo("<h2>ZADANIE 8: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Imie</th>");
             echo("<th>Zarobki</th>");
