@@ -218,7 +218,7 @@
 
                 echo("</table>");
                 require("connect.php");
-                $sql='SELECT avg(zarobki) as az, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30'
+                $sql='SELECT avg(zarobki) as az, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30';
                 echo("<h2>ZADANIE 15: $sql</h2>");
                 $result = $conn->query($sql);
                 echo("<table border=1>");
