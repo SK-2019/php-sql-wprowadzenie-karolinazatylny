@@ -143,8 +143,9 @@
 
             echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 8: SELECT count(imie) as liczba_kobiet FROM pracownicy, organizacja WHERE (dzial = id_org and imie like 'a%')</h2>");
-        $result = $conn->query('SELECT count(imie) as lk FROM pracownicy, organizacja WHERE (dzial = id_org and imie like "a%")'); 
+        $sql='SELECT count(imie) as lk FROM pracownicy, organizacja WHERE (dzial = id_org and imie like "a%")';
+        echo("<h2>ZADANIE 8: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Liczba_Kobiet</th>");
                 while($row=$result->fetch_assoc()){ 
@@ -157,8 +158,9 @@
 
             echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 9: SELECT count(imie) as liczba_mężczyzn FROM pracownicy, organizacja WHERE (dzial = id_org and imie not like 'a%')</h2>");
-        $result = $conn->query('SELECT count(imie) as lm FROM pracownicy, organizacja WHERE (dzial = id_org and imie not like "a%")'); 
+        $sql='SELECT count(imie) as lm FROM pracownicy, organizacja WHERE (dzial = id_org and imie not like "a%")';
+        echo("<h2>ZADANIE 9: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Liczba_Mężczyzn</th>");
                 while($row=$result->fetch_assoc()){ 
@@ -171,8 +173,9 @@
 
             echo("</table>");
         require("connect.php");
-        echo("<h2>ZADANIE 10: SELECT max(zarobki) as max FROM pracownicy, organizacja WHERE (dzial = id_org)</h2>");
-        $result = $conn->query('SELECT max(zarobki) as max FROM pracownicy, organizacja WHERE (dzial = id_org)'); 
+        $sql='SELECT max(zarobki) as max FROM pracownicy, organizacja WHERE (dzial = id_org)';
+        echo("<h2>ZADANIE 10: $sql</h2>");
+        $result = $conn->query($sql); 
             echo("<table border=1>");
             echo("<th>Max</th>");
                 while($row=$result->fetch_assoc()){ 
