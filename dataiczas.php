@@ -357,7 +357,6 @@
             echo("<th>Dzień</th>");
             echo("<th>Imie</th>");
             echo("<th>Data_urodzenia</th>");
-         
           while($row=$result->fetch_assoc()) {
               echo("<tr>");
                   echo("<td>".$row["dzien"]."</td><td>".$row["imie"]."</td><td>".$row["data_urodzenia"]."</td>");
@@ -365,6 +364,22 @@
           }
              echo("</table>");
 
+
+        require("connect.php"); 
+        $sql1 = ("SET lc_time_names = 'pl_PL'");
+        $sql2 = ("SELECT Count(DATE_FORMAT(data_urodzenia,'%W')) as urodzeniwpon FROM pracownicy where DATE_FORMAT(data_urodzenia, '%W')='Poniedziałek'");
+        echo("<h2>ZADANIE 9: $sql2</h2>");
+        $result=$conn->query($sql1);
+        $result=$conn->query($sql2);
+        include("connect.php");
+             echo("<table border=1>");
+             echo("<th>Urodzeni_w_poniedziałek</th>");
+                     while($row=$result->fetch_assoc()) {
+                        echo("<tr>");
+                             echo("<td>".$row["urodzeniwpon"]."</td>");
+                        echo("</tr>");
+                        }
+                         echo("</table>");
         
 
         
