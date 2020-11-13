@@ -136,6 +136,22 @@
                   }
           echo("</table>");
 
+          require("connect.php");
+         $sql='SELECT dzial, max(YEAR(CURDATE()) - YEAR(data_urodzenia)) as max, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+           echo("<h2>ZADANIE 9: $sql</h2>");
+           $result = $conn->query($sql);
+               echo("<table border>");
+               echo("<th>Dział</th>");
+               echo("<th>Wiek_najstarsi</th>");
+               echo("<th>Nazwa_działu</th>");
+                   while($row=$result->fetch_assoc()){ 
+                       echo("<tr>");
+                       echo("<td>".$row["dzial"]."</td><td>".$row["max"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                       echo("</tr>");
+                  }
+          echo("</table>");
+
+
 
          
 
