@@ -121,6 +121,24 @@
                  }
          echo("</table>");
 
+         require("connect.php");
+         $sql='SELECT dzial, sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+           echo("<h2>ZADANIE 8: $sql</h2>");
+           $result = $conn->query($sql);
+               echo("<table border>");
+               echo("<th>Dział</th>");
+               echo("<th>Suma_wiek</th>");
+               echo("<th>Nazwa_działu</th>");
+                   while($row=$result->fetch_assoc()){ 
+                       echo("<tr>");
+                       echo("<td>".$row["dzial"]."</td><td>".$row["suma"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                       echo("</tr>");
+                  }
+          echo("</table>");
+
+
+         
+
 ?>
 
 </body>
