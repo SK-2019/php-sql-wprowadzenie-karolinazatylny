@@ -152,21 +152,196 @@
           echo("</table>");
 
           require("connect.php");
-          $sql='SELECT min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org AND (nazwa_dzial="handel" OR nazwa_dzial="serwis" group by dzial';
-            echo("<h2>ZADANIE 10: $sql</h2>");
+          $sql = ("SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial from pracownicy, organizacja WHERE id_org=dzial and (nazwa_dzial='handel' OR nazwa_dzial='serwis') GROUP BY dzial");
+          echo("<h2>ZADANIE 10: $sql</h2>");
+          $result=$conn->query($sql);
+          include("connect.php");
+                  echo("<table border=1>");
+                  echo("<th>Min</th>");
+                  echo("<th>Nazwa_dział</th>");
+                  while($row=$result->fetch_assoc()) {
+                          echo("<tr>");
+                              echo("<td>".$row["min"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                          echo("</tr>");
+                      }
+                  echo("</table>");
+
+          require("connect.php");
+          $sql='SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) as dni_zycia FROM pracownicy';
+            echo("<h2>ZADANIE 12: $sql</h2>");
             $result = $conn->query($sql);
                 echo("<table border>");
-                echo("<th>Wiek_najmłodsi</th>");
-                echo("<th>Nazwa_działu</th>");
-                  while($row=$result->fetch_assoc()){
-                      echo("<tr>");
-                        echo("<td>".$row['min']."</td><td>".$row['nazwa_dzial']."</td>");
+                echo("<th>Imie</th>");
+                echo("<th>Dni_życia</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["imie"]."</td><td>".$row["dni_zycia"]."</td>");                    
                         echo("</tr>");
-                  }
-            echo("</table>");
-     
+                   }
+           echo("</table>");
 
-?>
+            require("connect.php");
+            $sql='SELECT * FROM pracownicy, organizacja WHERE (id_org=dzial) and (imie not like "%a") order by data_urodzenia ASC LIMIT 1';
+              echo("<h2>ZADANIE 13: $sql</h2>");
+              $result = $conn->query($sql);
+                  echo("<table border>");
+                  echo("<th>Id_pracownicy</th>");
+                  echo("<th>Imie</th>");
+                  echo("<th>Dział</th>");
+                  echo("<th>Zarobki</th>");
+                  echo("<th>Data_urodzenia</th>");
+                  echo("<th>Nazwa_działu</th>");
+                      while($row=$result->fetch_assoc()){ 
+                          echo("<tr>");
+                          echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                         echo("</tr>");
+                     }
+             echo("</table>");
+        
+
+
+
+
+
+
+
+             echo("<h1>Formatowanie dat </h1>");
+
+
+             require("connect.php");
+             $sql = ("SELECT *, DATE_FORMAT(data_urodzenia,'%W-%m-%Y') as format from pracownicy");
+             echo("<h2>ZADANIE 1: $sql</h2>");
+             $result=$conn->query($sql);
+             include("connect.php");
+                     echo("<table border=1>");
+                     echo("<th>Id_pracownicy</th>");
+                     echo("<th>Imie</th>");
+                     echo("<th>Dział</th>");
+                     echo("<th>Zarobki</th>");
+                     echo("<th>Data_urodzenia</th>");
+                     echo("<th>Nazwa_działu</th>");
+                     while($row=$result->fetch_assoc()) {
+                             echo("<tr>");
+                                 echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["format"]."</td>");
+                             echo("</tr>");
+                         }
+                     echo("</table>");
+
+
+             require("connect.php");
+             $sql1 = ("SET lc_time_names = 'pl_PL'");
+             $sql2 = ("SELECT DATE_FORMAT(CURDATE(), '%W')as data");
+             echo("<h2>ZADANIE 2: $sql2</h2>");
+             $result=$conn->query($sql1);
+             $result=$conn->query($sql2);
+
+             include("connect.php");
+                     echo("<table border=1>");
+                     echo("<th>Data</th>");
+                     while($row=$result->fetch_assoc()) {
+                             echo("<tr>");
+                                 echo("<td>".$row["data"]."</td>");
+                             echo("</tr>");
+                         }
+                     echo("</table>");
+
+
+             require("connect.php");
+             $sql1 = ("SET lc_time_names = 'pl_PL'");
+             $sql2 = ("SELECT *, DATE_FORMAT(data_urodzenia,'%M-%W-%Y') as format from pracownicy");
+             echo("<h2>ZADANIE 3: $sql2</h2>");
+             $result=$conn->query($sql);
+             include("connect.php");
+                     echo("<table border=1>");
+                     echo("<th>Id_pracownicy</th>");
+                     echo("<th>Imie</th>");
+                     echo("<th>Dział</th>");
+                     echo("<th>Zarobki</th>");
+                     echo("<th>Data_urodzenia</th>");
+                     echo("<th>Format</th>");
+                     while($row=$result->fetch_assoc()) {
+                             echo("<tr>");
+                                 echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["format"]."</td>");
+                             echo("</tr>");
+                         }
+                     echo("</table>");
+
+
+            require("connect.php");
+            $sql2 = ("SELECT curtime(4)");
+            echo("<h2>ZADANIE 4: $sql2</h2>");
+            $result=$conn->query($sql2);
+            include("connect.php");
+                      echo("<table border=1>");
+                     echo("<th>Curtime(4)</th>");
+                     while($row=$result->fetch_assoc()) {
+                            echo("<tr>");
+                                  echo("<td>".$row["curtime(4)"]."</td>");
+                            echo("</tr>");
+                            }
+                         echo("</table>");
+
+                         
+            require("connect.php");
+            $sql1 = ("SET lc_time_names = 'pl_PL'");
+            $sql2 = ("SELECT *, DATE_FORMAT(data_urodzenia,'%Y-%M-%W') as format from pracownicy");
+            echo("<h2>ZADANIE 5: $sql2</h2>");
+            $result=$conn->query($sql1);
+            $result=$conn->query($sql2);                
+            include("connect.php");
+                    echo("<table border=1>");
+                    echo("<th>Id_pracownicy</th>");
+                    echo("<th>Imie</th>");
+                    echo("<th>Dział</th>");
+                    echo("<th>Zarobki</th>");
+                    echo("<th>Data_urodzenia</th>");
+                    echo("<th>Format</th>");
+                        while($row=$result->fetch_assoc()) {
+                                echo("<tr>");
+                                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["format"]."</td>");
+                                echo("</tr>");
+                            }
+                        echo("</table>");
+
+            require("connect.php");            
+             $sql1 = ("SET lc_time_names = 'pl_PL'");
+            $sql2 = ("SELECT imie,  DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy");
+           echo("<h2>ZADANIE 6: $sql2</h2>");
+             $result=$conn->query($sql1);
+             $result=$conn->query($sql2);
+               include("connect.php");
+               echo("<table border=1>");
+                echo("<th>Imie</th>");
+              echo("<th>Dni</th>");
+              echo("<th>Godziny</th>");
+              echo("<th>Minuty</th>");
+                while($row=$result->fetch_assoc()) {
+                     echo("<tr>");
+                         echo("<td>".$row["imie"]."</td><td>".$row["dni"]."</td><td>".$row["godziny"]."</td><td>".$row["minuty"]."</td>");
+                     echo("</tr>");
+                  }
+                 echo("</table>");
+
+
+                 require("connect.php");   
+                 $sql2 = ('SELECT DATE_FORMAT("2003-01-26", "%j") as dzienroku');
+                 echo("<h2>ZADANIE 7: $sql2</h2>");
+                 $result=$conn->query($sql2);
+                 include("connect.php");
+                         echo("<table border=1>");
+                         echo("<th>Dzień_roku</th>");
+                         while($row=$result->fetch_assoc()) {
+                                 echo("<tr>");
+                                     echo("<td>".$row["dzienroku"]."</td>");
+                                 echo("</tr>");
+                             }
+                         echo("</table>");
+            
+
+
+
+
+     ?>
 
 </body>
 </html>
