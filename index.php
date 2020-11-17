@@ -16,6 +16,10 @@
     <a href="dataiczas.php"><b>DATA I CZAS</b></a> 
 </h3>
 </div>
+     <form action="strona.php" method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="wyślij w świat">
+    </form>
 <h1>✿ Karolina Zatylny ✿</h1>
 <hr>
 
