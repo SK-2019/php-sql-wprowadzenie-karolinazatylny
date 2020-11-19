@@ -17,6 +17,7 @@
     <a href="formularz.html">FORMULARZ</a>
 </h3>
 </div>
+
      <form action="strona.php" method="POST">
              <input type="text" name="firstname"></br>
         <input type="text" name="name"></br>
