@@ -17,6 +17,14 @@
     <a href="formularz.html">FORMULARZ</a>
 </h3>
 </div>
+     <form action="strona.php" method="POST">
+             <input type="text" name="firstname"></br>
+        <input type="text" name="name"></br>
+        <input type="text" name="phone"></br>
+        <input type="text" name="city"></br>
+
+        <input type="submit" value="wyślij w świat">
+   </form>
 
 <h1>✿ Karolina Zatylny ✿</h1>
 <hr>
