@@ -16,7 +16,7 @@
     <a href="dataiczas.php"><b>DATA I CZAS</b></a> 
 </h3>
 </div>
-     <form action="strona.php" method="POST">
+ <form action="strona.php" method="POST">
              <input type="text" name="firstname"></br>
         <input type="text" name="name"></br>
         <input type="text" name="phone"></br>
