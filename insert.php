@@ -1,5 +1,9 @@
-<?php
-
+    <?php
+    echo("jestes w insert.php <br>");
+    echo "<li>". $_POST['name'];
+    echo "<li>". $_POST['dzial'];
+    echo "<li>". $_POST['zarobki'];
+    echo "<li>". $_POST['data_urodzenia'];
 
 
                $conn = new mysqli("mysql-karolinazatylny.alwaysdata.net","217224","karolcia9","karolinazatylny_123");
@@ -11,12 +15,24 @@
             }
             
             
-            $sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
-            VALUES (null,'Ksawery', 3, 36,'1995-10-21')";
             
-            
-            
-            $conn->query($sql);
+    $sql = "INSERT INTO Pracownik (null, name, dzial,zarobki,data_urodzenia)
+            VALUES (
+              null, 
+              $_POST['name'], 
+              $_POST['dzial'], 
+              $_POST['zarobki'],
+              $_POST['data_urodzenia']
+            ";
 
-            $conn->close();
-            ?>
+
+      echo "<li>". $sql;
+
+      if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+      $conn->close();
+      ?>
