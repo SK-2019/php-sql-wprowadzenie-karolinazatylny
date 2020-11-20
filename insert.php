@@ -16,18 +16,11 @@
               $_POST['data_urodzenia']
             ))";
 
- $conn = new mysqli("remotemysql.com","gQvQ0qIoDC","4HAPys5ynL","gQvQ0qIoDC");
+ $conn = new mysqli('mysql-karolinazatylny.alwaysdata.net','217224','karolcia9','karolinazatylny_123');
                 $result=$conn->query($sql);
                 include("connect.php"); 
 
 
       echo ($sql);
 
-//       if ($conn->query($sql) === TRUE) {
-//         echo "New record created successfully";
-//       } else {
-//         echo "Error: " . $sql . "<br>" . $conn->error;
-//       }
-
-//       $conn->close();
       ?>
