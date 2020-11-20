@@ -1,10 +1,24 @@
 <?php
-        echo("Imie:".$_POST['imie']."<br>");
-        echo("Dzial:".$_POST['dzial']."<br>");
-        echo("Zarobki:".$_POST['zarobki']."<br>");
-        echo("Data:".$POST['data']); 
-      require_once("connect.php");
-      $sql =  "INSERT INTO pracownicy(id_pracownicy, imie, dzial, zarobki, data_urodzenia) VALUES (NULL,'".$_POST['imie']."','".$_POST['dzial']."','".$_POST['zarobki']."','".$POST['data']."')";
-      mysqli_query($conn,$sql);
-      mysqli_close($conn);
-    ?>
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki) 
+       VALUES (null,'Balbina', 4, 86,'1999-05-21')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+//informacja o ewentualnych błędach
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
