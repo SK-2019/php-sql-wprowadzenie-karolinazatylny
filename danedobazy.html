@@ -3,15 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Dane do Bazy</title>
+  <title>Prosty Formularz</title>
 </head>
+        <head>
+        <link rel="stylesheet" href="styles.css">
+        </head>	
+
 <body>
-	<form action="insert.php" method="POST">
-	    <input type="text" name="imie">
-			<input type="number" name="dzial"></br>
-			<input type="number" name="zarobki"></br>
-			<input type="date" name="data_urodzenia"></br>
-			<input type="submit" value="dodaj pracownika">
-	</form>
+<form action="insert.php" method="POST">
+	<input type="text" name="name" placeholder="Imie"></br>
+	<input type="text" name="dzial" placeholder="Dział"></br>
+	<input type="text" name="zarobki" placeholder="Zarobki"></br>
+	<input type="text" name="data_urodzenia" placeholder="Data urodzenia"></br>
+	<input type="submit" value="wyślij do insert.php">
+</form>
 </body>
+
+	
 </html>
