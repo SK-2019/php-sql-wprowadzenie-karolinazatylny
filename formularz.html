@@ -3,12 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Prosty Formuarz</title>
+  <title>Prosty Formularz</title>
 </head>
+        <head>
+        <link rel="stylesheet" href="styles.css">
+        </head>	
+
 <body>
 <form action="strona.php" method="POST">
-   <input type="text" name="firstname"></br>
-   <input type="submit" value="wyślij do strona.php">
+	<input type="text" name="firstname" placeholder="Imie"></br>
+	<input type="text" name="lastname" placeholder="Nazwisko"></br>
+	<input type="text" name="city" placeholder="Miasto"></br>
+	<input type="text" name="phone" placeholder="Numer tel"></br>
+	<input type="text" name="poscode" placeholder="Kod pocztowy"></br>
+	<input type="submit" value="wyślij do strona.php">
 </form>
 </body>
+
+	
 </html>
