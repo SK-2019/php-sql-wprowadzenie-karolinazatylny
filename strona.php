@@ -1,13 +1,20 @@
+<html>
+        <head>
+        <link rel="stylesheet" href="styles.css">
+        </head>
+  
+</html> 
+
 <?php
-	echo("jesteś na stronie.php");
-	
-	echo("<ul>");
-	
-	echo("<li>".$_POST["firstname"]);
-	echo("<li>".$_POST["lastname"]);
-	echo("<li>".$_POST["city"]);
-	echo("<li>".$_POST["phone"]);
-	echo("<li>".$_POST["poscode"]);
-	
-	echo("<ul>");
+include("connect.php");
+echo("<li> imie: ".$_POST['firstname']."</li>");
+echo("<li> nazwisko: ".$_POST['lastname']."</li>");
+echo("<li> miasto: ".$_POST['city']."</li>");
+echo("<li> numer tel: ".$_POST['phone']."</li>");
+echo("<li> kod pocztowy: ".$_POST['poscode']."</li>");
+
+
+$sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia') VALUES (null,'józef',2,23,'2001-10-23')";
+$conn->query($sql);
+
 ?>
