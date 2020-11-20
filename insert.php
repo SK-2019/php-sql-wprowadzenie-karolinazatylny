@@ -1,5 +1,11 @@
 <?php
 
+echo("jestes w insert.php <br>");
+echo ("<li>". $_POST['name']);
+echo ("<li>". $_POST['dzial']);
+echo ("<li>". $_POST['zarobki']);
+echo ("<li>". $_POST['data_urodzenia']);
+
 $servername = "mysql-karolinazatylny.alwaysdata.net";
 $username = "217224";
 $password = "karolcia9";
@@ -18,7 +24,7 @@ $conn->query($sql);
 if ($conn->query($sql) === TRUE) {
   echo ("New record created successfully");
 } else {
-
+//informacja o ewentualnych błędach
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
