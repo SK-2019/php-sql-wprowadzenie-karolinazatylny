@@ -45,3 +45,9 @@ hr{
 tr:nth-child(even){background-color:rgb(168, 160, 211);}
 tr:hover{background-color:lavender;
 }
+
+p.ex1 {
+  border: 1px solid rgb(53, 30, 99);
+  outline-style: solid;
+  outline-color: rgb(53, 30, 99);
+}
