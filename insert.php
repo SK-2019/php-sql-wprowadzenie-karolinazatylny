@@ -50,4 +50,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+
+header("location: https://kmz-test.herokuapp.com/danedobazy.php");
+
 ?>
