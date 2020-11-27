@@ -16,7 +16,7 @@
     <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
     <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
     <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.html">DANE DO BAZY</b></a>
+    <a href="danedobazy.php">DANE DO BAZY</b></a>
 </h3>
 </div>
 
@@ -58,7 +58,7 @@ $result=$conn->query($sql);
 
     while($row=$result->fetch_assoc()) {
             echo("<tr>");
-                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["data_urodzenia"]."</td>
+                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>
 		
 		<td>
 		
@@ -73,10 +73,5 @@ $result=$conn->query($sql);
             echo("</tr>");
         }
     echo("</table>");
-
-
-
 ?>
-
-	
 </html>
