@@ -41,5 +41,42 @@
 
 </body>
 
+<?php
+
+require_once("connect.php");
+
+$sql = ("SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org");
+$result=$conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>Id_pracownicy</th>");
+    echo("<th>Imie</th>");
+    echo("<th>Zarobki</th>");
+    echo("<th>Data_urodzenia</th>");
+    echo("<th>Nazwa_działu</th>");
+    echo("<th>Usuwanie</th>");
+
+
+    while($row=$result->fetch_assoc()) {
+            echo("<tr>");
+                echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["data_urodzenia"]."</td>
+		
+		<td>
+		
+		<form action='delete.php' method='POST'>
+   			<input type='number' name='id' value='".$row['id_pracownicy']."' hidden></br>
+   			<input type='submit' value='Usuń'>
+		</form>
+		
+		</td>
+		
+		");
+            echo("</tr>");
+        }
+    echo("</table>");
+
+
+
+?>
+
 	
 </html>
