@@ -15,7 +15,8 @@
     <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
     <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
     <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.php">DANE DO BAZY</b></a>
+    <a href="danedobazy.php">DANE DO BAZY | </b></a>
+    <a href="ksiazki.php">KSIĄŻKI</b></a>
 </h3>
 </div>
 
