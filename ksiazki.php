@@ -32,12 +32,12 @@ echo("<h2>".$sql."</h2>");
 
 $result=$conn->query($sql);
      echo("<table border=1>");
-     echo("<th>id</th>");
-     echo("<th>tytul</th>");
+     echo("<th>Id</th>");
+     echo("<th>Tytuł</th>");
 
        while($row=$result->fetch_assoc()) {
                 echo("<tr>");
-                    echo("<td>".$row["tytul_id"]."</td><td>".$row["tytul"]."</td>");
+                    echo("<td>".$row["biblTytul_id"]."</td><td>".$row["tytul"]."</td>");
                 echo("</tr>");
             }
         echo("</table>");
@@ -48,12 +48,12 @@ echo("<h2>".$sql."</h2>");
 
 $result=$conn->query($sql);
         echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>autor</th>");
+        echo("<th>Id</th>");
+        echo("<th>Autor</th>");
 
         while($row=$result->fetch_assoc()) {
                 echo("<tr>");
-                    echo("<td>".$row["autor_id"]."</td><td>".$row["autor"]."</td>");
+                    echo("<td>".$row["biblAutor_id"]."</td><td>".$row["autor"]."</td>");
                 echo("</tr>");
             }
         echo("</table>");
@@ -65,9 +65,9 @@ $result=$conn->query($sql);
             
             $result=$conn->query($sql);
                     echo("<table border=1>");
-                    echo("<th>id</th>");
-                    echo("<th>autor</th>");
-                    echo("<th>tytul</th>");
+                    echo("<th>Id</th>");
+                    echo("<th>Autor</th>");
+                    echo("<th>Tytuł</th>");
 
             
                     while($row=$result->fetch_assoc()) {
