@@ -30,7 +30,7 @@ $sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul WHERE biblAutor_
 echo("<h2>".$sql."</h2>");
 
  $result = $conn->query($sql);
-        echo("<table>");
+         echo("<table border=1>");
         echo("<th>Id</th>");
         echo("<th>Autor</th>");
         echo("<th>Tytuł</th>");
@@ -47,7 +47,7 @@ $sql = 'SELECT * FROM biblAutor';
 echo("<h2>".$sql."</h2>");
 
  $result = $conn->query($sql);
-        echo("<table>");
+        echo("<table border=1>");
         echo("<th>Id</th>");
         echo("<th>Autorzy</th>");
             while($row=$result->fetch_assoc()){ 
@@ -64,7 +64,7 @@ $sql = 'SELECT * FROM biblTytul';
 echo("<h2>".$sql."</h2>");
 
  $result = $conn->query($sql);
-        echo("<table>");
+        echo("<table border=1>");
         echo("<th>Id</th>");
         echo("<th>Tytuł</th>");
             while($row=$result->fetch_assoc()){ 
