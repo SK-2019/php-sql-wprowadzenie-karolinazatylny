@@ -27,17 +27,18 @@
 
 require_once("connect.php");
 
-$sql = ("SELECT * from biblTytul");
+$sql = ("$sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul WHERE biblAutor_id=biblAutor.id and biblTytul_id=biblTytul.id'");
 echo("<h2>".$sql."</h2>");
 
 $result=$conn->query($sql);
      echo("<table border=1>");
      echo("<th>Id</th>");
+     echo("<th>Autor</th>");
      echo("<th>Tytuł</th>");
 
        while($row=$result->fetch_assoc()) {
                 echo("<tr>");
-                    echo("<td>".$row["biblTytul_id"]."</td><td>".$row["tytul"]."</td>");
+                    echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>"););
                 echo("</tr>");
             }
         echo("</table>");
@@ -49,30 +50,29 @@ echo("<h2>".$sql."</h2>");
 $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Id</th>");
-        echo("<th>Autor</th>");
+        echo("<th>Autorzy</th>");
 
         while($row=$result->fetch_assoc()) {
                 echo("<tr>");
-                    echo("<td>".$row["biblAutor_id"]."</td><td>".$row["autor"]."</td>");
+                    echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td>");
                 echo("</tr>");
             }
         echo("</table>");
 
 
         
-            $sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id");
+            $sql = ("SELECT * from biblTytul");
             echo("<h2>".$sql."</h2>");
             
             $result=$conn->query($sql);
                     echo("<table border=1>");
                     echo("<th>Id</th>");
-                    echo("<th>Autor</th>");
                     echo("<th>Tytuł</th>");
 
             
                     while($row=$result->fetch_assoc()) {
                             echo("<tr>");
-                                echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>");
+                                echo("<td>".$row["id"]."</td><td>".$row["tytul"]."</td>");
                             echo("</tr>");
                         }
                     echo("</table>");
