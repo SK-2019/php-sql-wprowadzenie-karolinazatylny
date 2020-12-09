@@ -8,7 +8,7 @@
     </head>
 <body>
 
-<<h3>
+<h3>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
     <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
     <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
