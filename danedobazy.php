@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-        <head>
-        <link rel="stylesheet" href="styles.css">
-        </head>	
-	
-	<div class="nav"
-<h3>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
-    <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
-    <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
-    <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
-    <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
-    <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
-    <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.php">DANE DO BAZY | </b></a>
-    <a href="ksiazki.php">KSIĄŻKI</b></a>
-</h3>
+<body>
+
+  <h1>K a r o l i n a   ★   Z a t y l n y</h1>
 </div>
 
-<h1>✿ Karolina Zatylny ✿</h1>
-<hr>
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+    <h6>
+    <li><a class="link" href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></li>
+    <li><a class="link" href="index.php"><b>STRONA GŁÓWNA</b></a></li>
+    <li><a class="link" href="zadania.php"><b>ZADANIA</b></a></li>
+    <li><a class="link" href="agregat.php"><b>FUNKCJE AGREGUJĄCE</b></a></li>
+    <li><a class="link" href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a></li>
+    <li><a class="link" href="pracownicy.php"><b>PRACOWNICY</b></a></li>
+    <li><a class="link" href="dataiczas.php"><b>DATA I CZAS</b></a></li>
+    <li><a class="link" href="formularz.html"><b>FORMULARZ</b></a></li>
+    <li><a class="link" href="danedobazy.php"><b>DANE DO BAZY</b></a></li>
+    <li><a class="link" href="ksiazki.php"><b>KSIĄŻKI</b></a></li>
+    </h6>
+    </ul>
+  </div>
 
+  <div class="col-6 col-s-9">
 <body>
-<h2>DODAWANIE PRACOWNIKA</h2>
+<h5>Dodawanie pracownika</h5>
+<h7>
 <form action="insert.php" method="POST">
 	<input type="text" name="name" placeholder="Imie"></br>
 	<input type="number" name="dzial" placeholder="Dział"></br>
@@ -34,13 +41,15 @@
 	<input type="date" name="data_urodzenia" placeholder="Data urodzenia"></br>
 	<input type="submit" value="wyślij do insert.php">
 </form>
+</h7>
 
-<h2>USUWANIE PRACOWNIKA</h2>
+<h5>Usuwanie pracownika</h5>
+<h7>
 <form action="delete.php" method="POST">
    <input type="number" name="id"></br>
    <input type="submit" value="Usuń pracownika">
 </form>
-
+</h7>
 </body>
 
 <?php
@@ -63,12 +72,10 @@ $result=$conn->query($sql);
                 echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>
 		
 		<td>
-		
 		<form action='delete.php' method='POST'>
    			<input type='number' name='id' value='".$row['id_pracownicy']."' hidden></br>
-   			<input type='submit' value='Usuń'>
+   			<input type='submit' value='X'>
 		</form>
-		
 		</td>
 		
 		");
@@ -76,4 +83,18 @@ $result=$conn->query($sql);
         }
     echo("</table>");
 ?>
+            <hr>
+              </div>
+            
+              <div class="col-3 col-s-12">
+              <img src="https://i.pinimg.com/originals/21/a7/09/21a709084d7132848f730e245d41c584.jpg">
+            </div>
+            
+              <p>
+              <div class="obrazek">    
+              <img src="https://i.pinimg.com/originals/57/98/5b/57985bf3c5bf34f9c6c41aeb849d3a5b.jpg"></p>
+            </div>
+            </div>
+            
+            </body>
 </html>
