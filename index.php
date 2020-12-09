@@ -1,196 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Karolina Zatylny 2Ti</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="nav"
-<h3>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
-    <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
-    <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
-    <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
-    <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
-    <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
-    <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.php">DANE DO BAZY | </b></a>
-    <a href="ksiazki.php">KSIĄŻKI</b></a>
-</h3>
+
+  <h1>K a r o l i n a   ★   Z a t y l n y</h1>
 </div>
 
-<h1>✿ Karolina Zatylny ✿</h1>
-<hr>
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+    <h6>
+    <li><a class="link" href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></li>
+    <li><a class="link" href="index.php"><b>STRONA GŁÓWNA</b></a></li>
+    <li><a class="link" href="zadania.php"><b>ZADANIA</b></a></li>
+    <li><a class="link" href="agregat.php"><b>FUNKCJE AGREGUJĄCE</b></a></li>
+    <li><a class="link" href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a></li>
+    <li><a class="link" href="pracownicy.php"><b>PRACOWNICY</b></a></li>
+    <li><a class="link" href="dataiczas.php"><b>DATA I CZAS</b></a></li>
+    <li><a class="link" href="formularz.html"><b>FORMULARZ</b></a></li>
+    <li><a class="link" href="danedobazy.php"><b>DANE DO BAZY</b></a></li>
+    <li><a class="link" href="ksiazki.php"><b>KSIĄŻKI</b></a></li>
+    </h6>
+    </ul>
+  </div>
 
-<?php
+  <div class="col-6 col-s-9">
+    <h5>Strona Główna</h5>
+ <?php
 
-    require("connect.php");
-    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and imie not like "%a"';
-    echo("<h2>ZADANIE 1: $sql</h2>");
-    $result = $conn->query($sql);
-        echo("<table border=1>");
+require_once('connect.php');
+echo("<h2>Tabela Wszystkich Pracowników:</h2>");
+$sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org';
+$result = $conn->query($sql);
+    echo("<table border=1>");      
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
+        echo("<th>Dział</th>");
         echo("<th>Zarobki</th>");
         echo("<th>Data_Urodzenia</th>");
         echo("<th>Nazwa_Działu</th>");
             while($row=$result->fetch_assoc()){ 
                 echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
+                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
                 echo("</tr>");
             }
-
-        echo("</table>");
-    require("connect.php");
-    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org';
-    echo("<h2>ZADANIE 2: $sql</h2>");  
-    $result = $conn->query($sql); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>");  
-
-                echo("</tr>");
-            }
-
-        echo("</table>");
-    require("connect.php");
-    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=2 or dzial=1)';
-    echo("<h2>ZADANIE 3: $sql</h2>");  
-    $result = $conn->query($sql); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
-
-                echo("</tr>");
-            }
-
         echo("</table>");
 
-        echo("</table>");
-    require("connect.php");
-    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and dzial = 3';
-    echo("<h2>ZADANIE 4: $sql</h2>");  
-    $result = $conn->query($sql);
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
-
-                echo("</tr>");
-            }
-
-        echo("</table>");
-
-        echo("</table>");
-    require("connect.php");
-    $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and zarobki>=35';
-    echo("<h2>ZADANIE 5: $sql</h2>");  
-    $result = $conn->query($sql); 
-        echo("<table border=1>");
-        echo("<th>Imie</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
-
-                echo("</tr>");
-            }
-
-        echo("</table>");
-
-        echo("</table>");
-    require("connect.php");
-    $sql='SELECT avg(zarobki) as az FROM pracownicy, organizacja WHERE dzial = id_org';
-    echo("<h2>ZADANIE 6: $sql</h2>");
-    $result = $conn->query($sql); 
-        echo("<table border=1>");
-        echo("<th>Średnia_Zarobków</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["az"]."</td>");
-                echo("</tr>");
-            }
-
-        echo("</table>");
-
-        echo("</table>");
-        require("connect.php");
-        $sql='SELECT sum(zarobki) as sz FROM pracownicy, organizacja WHERE (dzial = id_org) and (zarobki>45)';
-        echo("<h2>ZADANIE 7: $sql</h2>");
-        $result = $conn->query($sql); 
-            echo("<table border=1>");
-            echo("<th>Suma_Zarobków</th>");
-                while($row=$result->fetch_assoc()){ 
-                    echo("<tr>");
-                        echo("<td>".$row["sz"]."</td>");
-                    echo("</tr>");
-                }
-    
-            echo("</table>");
-
-            echo("</table>");
-        require("connect.php");
-        $sql='SELECT count(imie) as lk FROM pracownicy, organizacja WHERE (dzial = id_org and imie like "a%")';
-        echo("<h2>ZADANIE 8: $sql</h2>");
-        $result = $conn->query($sql); 
-            echo("<table border=1>");
-            echo("<th>Liczba_Kobiet</th>");
-                while($row=$result->fetch_assoc()){ 
-                    echo("<tr>");
-                        echo("<td>".$row["lk"]."</td>");
-                    echo("</tr>");
-                }
-    
-            echo("</table>");
-
-            echo("</table>");
-        require("connect.php");
-        $sql='SELECT count(imie) as lm FROM pracownicy, organizacja WHERE (dzial = id_org and imie not like "a%")';
-        echo("<h2>ZADANIE 9: $sql</h2>");
-        $result = $conn->query($sql); 
-            echo("<table border=1>");
-            echo("<th>Liczba_Mężczyzn</th>");
-                while($row=$result->fetch_assoc()){ 
-                    echo("<tr>");
-                        echo("<td>".$row["lm"]."</td>");
-                    echo("</tr>");
-                }
-    
-            echo("</table>");
-
-            echo("</table>");
-        require("connect.php");
-        $sql='SELECT max(zarobki) as max FROM pracownicy, organizacja WHERE (dzial = id_org)';
-        echo("<h2>ZADANIE 10: $sql</h2>");
-        $result = $conn->query($sql); 
-            echo("<table border=1>");
+require_once('connect.php');
+echo("<h2>Tabela Funkcji Agregujących:</h2>");
+$result = $conn->query('SELECT dzial, sum(zarobki) as suma, avg(zarobki) as srednia, min(zarobki) as min, max(zarobki) as max, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org group by dzial');
+            echo("<table border=1>"); 
+            echo("<th>Dział</th>");
+            echo("<th>Suma</th>");
+            echo("<th>Średnia</th>");
+            echo("<th>Min</th>");
             echo("<th>Max</th>");
-                while($row=$result->fetch_assoc()){ 
-                    echo("<tr>");
-                        echo("<td>".$row["max"]."</td>");
-                    echo("</tr>");
-                }
-    
-            echo("</table>");
+            echo("<th>Nazwa_Działu</th>");
+                while($row = $result->fetch_assoc()) {
+        echo("<tr>");
+        echo("<td>".$row['dzial']."</td><td>".$row['suma']."</td><td>".$row['srednia']."</td><td>".$row['min']."</td><td>".$row['max']."</td><td>".$row["nazwa_dzial"]."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+
+
+	 
 ?>
-    
+<hr>
+  </div>
+
+  <div class="col-3 col-s-12">
+  <img src="https://i.pinimg.com/originals/21/a7/09/21a709084d7132848f730e245d41c584.jpg"
+  </div>
+</div>
+
+  <p>
+  <div class="obrazek">    
+  <img src="https://i.pinimg.com/originals/57/98/5b/57985bf3c5bf34f9c6c41aeb849d3a5b.jpg"></p>
+</div>
+</div>
+
 </body>
 </html>
