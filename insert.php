@@ -9,12 +9,14 @@
 <div class="nav"
 <h3>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
+    <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
     <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
     <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
     <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
     <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
     <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.php">DANE DO BAZY</b></a>
+    <a href="danedobazy.php">DANE DO BAZY | </b></a>
+    <a href="ksiazki.php">KSIĄŻKI</b></a>
 </h3>
 </div>
 

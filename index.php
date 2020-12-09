@@ -10,6 +10,7 @@
 <div class="nav"
 <h3>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
+    <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
     <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
     <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
     <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
