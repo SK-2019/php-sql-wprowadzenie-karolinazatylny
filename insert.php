@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="nav"
-<h3>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB | </b></a>
-    <a href="index.php"><b>STRONA GŁÓWNA | </b></a>
-    <a href="agregat.php"><b>FUNKCJE AGREGUJĄCE | </b></a>
-    <a href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY | </b></a>
-    <a href="pracownicy.php"><b>PRACOWNICY | </b></a>
-    <a href="dataiczas.php"><b>DATA I CZAS | </b></a> 
-    <a href="formularz.html"><b>FORMULARZ | </b></a>
-    <a href="danedobazy.php">DANE DO BAZY | </b></a>
-    <a href="ksiazki.php">KSIĄŻKI</b></a>
-</h3>
+
+  <h1>K a r o l i n a   ★   Z a t y l n y</h1>
 </div>
 
-<?php
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+    <h6>
+    <li><a class="link" href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></li>
+    <li><a class="link" href="index.php"><b>STRONA GŁÓWNA</b></a></li>
+    <li><a class="link" href="zadania.php"><b>ZADANIA</b></a></li>
+    <li><a class="link" href="agregat.php"><b>FUNKCJE AGREGUJĄCE</b></a></li>
+    <li><a class="link" href="orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a></li>
+    <li><a class="link" href="pracownicy.php"><b>PRACOWNICY</b></a></li>
+    <li><a class="link" href="dataiczas.php"><b>DATA I CZAS</b></a></li>
+    <li><a class="link" href="formularz.html"><b>FORMULARZ</b></a></li>
+    <li><a class="link" href="danedobazy.php"><b>DANE DO BAZY</b></a></li>
+    <li><a class="link" href="ksiazki.php"><b>KSIĄŻKI</b></a></li>
+    </h6>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h5>Insert</h5>
+ <?php
 
 echo("jestes w insert.php <br>");
 echo ("<li>". $_POST['name']);
