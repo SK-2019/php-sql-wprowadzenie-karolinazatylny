@@ -76,7 +76,6 @@ echo("<h2>".$sql."</h2>");
         echo("</select>");
 
 ?>
-            <hr>
               </div>
             
               <div class="col-3 col-s-12">
