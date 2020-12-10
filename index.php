@@ -77,14 +77,8 @@ $result = $conn->query('SELECT dzial, sum(zarobki) as suma, avg(zarobki) as sred
   </div>
 
   <div class="col-3 col-s-12">
-  <img src="https://i.pinimg.com/originals/21/a7/09/21a709084d7132848f730e245d41c584.jpg"
+  <img src="https://i.pinimg.com/originals/5c/59/9b/5c599b58148043e8129172b937ecf148.jpg"
   </div>
-</div>
-
-  <p>
-  <div class="obrazek">    
-  <img src="https://i.pinimg.com/originals/57/98/5b/57985bf3c5bf34f9c6c41aeb849d3a5b.jpg"></p>
-</div>
 </div>
 
 </body>
