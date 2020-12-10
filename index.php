@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -73,11 +73,10 @@ $result = $conn->query('SELECT dzial, sum(zarobki) as suma, avg(zarobki) as sred
 
 	 
 ?>
-<hr>
   </div>
 
   <div class="col-3 col-s-12">
-  <img src="https://i.pinimg.com/originals/5c/59/9b/5c599b58148043e8129172b937ecf148.jpg"
+  <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg"
   </div>
 </div>
 

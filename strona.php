@@ -1,7 +1,7 @@
   
 <html>
         <head>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
         </head>
 <div class="nav"
         <h3>
@@ -37,13 +37,7 @@ $conn->query($sql);
               </div>
             
               <div class="col-3 col-s-12">
-              <img src="https://i.pinimg.com/originals/21/a7/09/21a709084d7132848f730e245d41c584.jpg">
-            </div>
-            
-              <p>
-              <div class="obrazek">    
-              <img src="https://i.pinimg.com/originals/57/98/5b/57985bf3c5bf34f9c6c41aeb849d3a5b.jpg"></p>
-            </div>
+              <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg">
             </div>
             
             </body>

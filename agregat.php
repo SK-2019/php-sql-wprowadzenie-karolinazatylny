@@ -261,22 +261,14 @@
 
                 
                 ?>
-                <hr>
                   </div>
                 
                   <div class="col-3 col-s-12">
-                  <img src="https://i.pinimg.com/originals/21/a7/09/21a709084d7132848f730e245d41c584.jpg">
-                  <img src="https://i.pinimg.com/originals/cb/01/ad/cb01add37be89cbf3b7569a8114d1c0e.jpg">
-                  <img src="https://i.pinimg.com/originals/ad/14/dc/ad14dc698af234bfa7a67734ab70a2c7.jpg">
-                  <img src="https://i.pinimg.com/originals/f5/18/13/f5181303b2ff4fdd8d7bebd8cb975283.jpg">
-                  </div>
-                </div>
-                
-                  <p>
-                  <div class="obrazek">    
-                  <img src="https://i.pinimg.com/originals/57/98/5b/57985bf3c5bf34f9c6c41aeb849d3a5b.jpg"></p>
-                </div>
-                </div>
-                
+              <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg">
+              <img src="https://i.pinimg.com/originals/7e/d7/4a/7ed74aa645dbd75baefc98908de46deb.jpg">
+              <img src="https://i.pinimg.com/originals/06/ba/87/06ba87eab12886b624e7a96c370a669a.jpg">
+              <img src="https://i.pinimg.com/originals/ec/1b/2e/ec1b2e76bca565b4948c60aa105657ae.jpg">
+            </div>   
+            
                 </body>
                 </html>
