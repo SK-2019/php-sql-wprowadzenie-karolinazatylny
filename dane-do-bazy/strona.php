@@ -33,7 +33,6 @@ $sql="INSERT INTO 'pracownicy'('id', 'imie', 'dzial', 'zarobki', 'data_urodzenia
 $conn->query($sql);
 
 ?>
-            <hr>
               </div>
             
               <div class="col-3 col-s-12">
