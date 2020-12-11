@@ -264,6 +264,7 @@
                   </div>
                 
                   <div class="col-3 col-s-12">
+                  <h2><iframe src="https://open.spotify.com/embed/album/75eP8LZolyNBpqIRyB5pvB" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></h2>
               <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg">
               <img src="https://i.pinimg.com/originals/7e/d7/4a/7ed74aa645dbd75baefc98908de46deb.jpg">
               <img src="https://i.pinimg.com/originals/06/ba/87/06ba87eab12886b624e7a96c370a669a.jpg">
