@@ -34,7 +34,7 @@
     <h5>Pracownicy</h5>
  <?php
 
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=2 AND dzial=id_org';
     echo("<h2>ZADANIE 1: $sql</h2>");
     $result = $conn->query($sql);
