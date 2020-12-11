@@ -51,7 +51,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pracownicy (id_pracownicy,imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null,'".$_POST['name']."', 1, 76,'1991-11-21')";
+       VALUES(NULL,'".$_POST['imie']."', '".$_POST['dzial']."', '".$_POST['zarobki']."', '".$_POST['data_ur']."')";
 
 
 echo "<li>". $sql;
