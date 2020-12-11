@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
     <h5>Zadania</h5>
  <?php
 
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and imie not like "%a"';
     echo("<h2>ZADANIE 1: $sql</h2>");
     $result = $conn->query($sql);
@@ -51,7 +51,7 @@
             }
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org';
     echo("<h2>ZADANIE 2: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -68,7 +68,7 @@
             }
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=2 or dzial=1)';
     echo("<h2>ZADANIE 3: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -87,7 +87,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and dzial = 3';
     echo("<h2>ZADANIE 4: $sql</h2>");  
     $result = $conn->query($sql);
@@ -106,7 +106,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org and zarobki>=35';
     echo("<h2>ZADANIE 5: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -125,7 +125,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT avg(zarobki) as az FROM pracownicy, organizacja WHERE dzial = id_org';
     echo("<h2>ZADANIE 6: $sql</h2>");
     $result = $conn->query($sql); 
@@ -140,7 +140,7 @@
         echo("</table>");
 
         echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT sum(zarobki) as sz FROM pracownicy, organizacja WHERE (dzial = id_org) and (zarobki>45)';
         echo("<h2>ZADANIE 7: $sql</h2>");
         $result = $conn->query($sql); 
@@ -155,7 +155,7 @@
             echo("</table>");
 
             echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT count(imie) as lk FROM pracownicy, organizacja WHERE (dzial = id_org and imie like "a%")';
         echo("<h2>ZADANIE 8: $sql</h2>");
         $result = $conn->query($sql); 
@@ -170,7 +170,7 @@
             echo("</table>");
 
             echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT count(imie) as lm FROM pracownicy, organizacja WHERE (dzial = id_org and imie not like "a%")';
         echo("<h2>ZADANIE 9: $sql</h2>");
         $result = $conn->query($sql); 
@@ -185,7 +185,7 @@
             echo("</table>");
 
             echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT max(zarobki) as max FROM pracownicy, organizacja WHERE (dzial = id_org)';
         echo("<h2>ZADANIE 10: $sql</h2>");
         $result = $conn->query($sql); 

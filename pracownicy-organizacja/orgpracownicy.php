@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
     <h5>Organizacja i pracownicy</h5>
  <?php
 
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE dzial = id_org';
     echo("<h2>ZADANIE 1: $sql</h2>");
     $result = $conn->query($sql);
@@ -49,7 +49,7 @@
             }
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (dzial=1 or dzial=4)';
     echo("<h2>ZADANIE 2: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -66,7 +66,7 @@
             }
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) and (imie like "%a")';
     echo("<h2>ZADANIE 3: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -83,7 +83,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie not like "%a")';
     echo("<h2>ZADANIE 4: $sql</h2>");  
     $result = $conn->query($sql);
@@ -100,7 +100,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) order by imie desc';
     echo("<h2>ZADANIE 5: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -117,7 +117,7 @@
         echo("</table>");
 
         echo("</table>");
-    require("connect.php");
+    require("../connect.php");
     $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (dzial=3) order by imie asc';
     echo("<h2>ZADANIE 6: $sql</h2>");
     $result = $conn->query($sql); 
@@ -133,7 +133,7 @@
         echo("</table>");
 
         echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT imie, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie like "%a") order by imie asc';
         echo("<h2>ZADANIE 7: $sql</h2>");
         $result = $conn->query($sql); 
@@ -149,7 +149,7 @@
             echo("</table>");
 
             echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja where (dzial=id_org) AND (imie like "%a") AND (dzial=1 OR dzial=3) order by zarobki asc';
         echo("<h2>ZADANIE 8: $sql</h2>");
         $result = $conn->query($sql); 
@@ -166,7 +166,7 @@
             echo("</table>");
 
             echo("</table>");
-        require("connect.php");
+        require("../connect.php");
         $sql='SELECT imie, zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial = id_org) AND (imie not like "a%") order by nazwa_dzial asc, zarobki asc';
         echo("<h2>ZADANIE 9: $sql</h2>");
         $result = $conn->query($sql); 
@@ -181,7 +181,7 @@
                 }
     
             echo("</table>");
-            require("connect.php");
+            require("../connect.php");
             $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND dzial=4 order by zarobki desc limit 2';
         echo("<h2>ZADANIE 10: $sql</h2>");
         $result = $conn->query($sql); 
@@ -199,7 +199,7 @@
                 }
     
             echo("</table>");
-            require("connect.php");
+            require("../connect.php");
             $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND (dzial=4 or dzial=2) order by zarobki desc limit 3';
         echo("<h2>ZADANIE 11: $sql</h2>");
         $result = $conn->query($sql); 
@@ -217,7 +217,7 @@
                 }
     
             echo("</table>");
-            require("connect.php");
+            require("../connect.php");
             $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org order by data_urodzenia asc limit 1';
         echo("<h2>ZADANIE 12: $sql</h2>");
         $result = $conn->query($sql); 
