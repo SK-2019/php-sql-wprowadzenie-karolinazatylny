@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 <body>
 <h5>Dodawanie pracownika</h5>
 <h7>
-<form action="insert.php" method="POST">
+<form action="/dane-do-bazy/insert.php" method="POST">
 	<input type="text" name="name" placeholder="Imie"></br>
 	<input type="number" name="dzial" placeholder="Dział"></br>
 	<input type="number" name="zarobki" placeholder="Zarobki"></br>
@@ -45,7 +45,7 @@
 
 <h5>Usuwanie pracownika</h5>
 <h7>
-<form action="delete.php" method="POST">
+<form action="/dane-do-bazy/delete.php" method="POST">
    <input type="number" name="id"></br>
    <input type="submit" value="Usuń pracownika">
 </form>
@@ -54,7 +54,7 @@
 
 <?php
 
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = ("SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org");
 $result=$conn->query($sql);
@@ -72,7 +72,7 @@ $result=$conn->query($sql);
                 echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>
 		
 		<td>
-		<form action='delete.php' method='POST'>
+		<form action='/dane-do-bazy/delete.php' method='POST'>
    			<input type='number' name='id' value='".$row['id_pracownicy']."' hidden></br>
    			<input type='submit' value='X'>
 		</form>
