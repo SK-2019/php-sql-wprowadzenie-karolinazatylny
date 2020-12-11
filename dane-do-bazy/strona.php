@@ -1,7 +1,7 @@
   
 <html>
         <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
         </head>
 <div class="nav"
         <h3>
@@ -21,7 +21,7 @@
 </html> 
 
 <?php
-include("connect.php");
+include("../connect.php");
 echo("<li> imie: ".$_POST['firstname']."</li>");
 echo("<li> nazwisko: ".$_POST['lastname']."</li>");
 echo("<li> miasto: ".$_POST['city']."</li>");
