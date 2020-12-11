@@ -76,7 +76,8 @@ $result = $conn->query('SELECT dzial, sum(zarobki) as suma, avg(zarobki) as sred
   </div>
 
   <div class="col-3 col-s-12">
-  <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg"
+  <img src="https://i.pinimg.com/originals/4c/75/20/4c75209a730e0786f6410483e0d45cd7.jpg">
+  <iframe src="https://open.spotify.com/embed/album/75eP8LZolyNBpqIRyB5pvB" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
 </div>
 
