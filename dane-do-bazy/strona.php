@@ -6,7 +6,7 @@
 <div class="nav"
         <h3>
         <li><a class="link" href="https://github.com/SK-2019/php-sql-wprowadzenie-karolinazatylny"><b>GITHUB</b></a></li>
-      <li><a class="link" href="index.php"><b>STRONA GŁÓWNA</b></a></li>
+      <li><a class="link" href="/index.php"><b>STRONA GŁÓWNA</b></a></li>
       <li><a class="link" href="/pracownicy-organizacja/zadania.php"><b>ZADANIA</b></a></li>
       <li><a class="link" href="/pracownicy-organizacja/agregat.php"><b>FUNKCJE AGREGUJĄCE</b></a></li>
       <li><a class="link" href="/pracownicy-organizacja/orgpracownicy.php"><b>ORGANIZACJA I PRACOWNICY</b></a></li>
