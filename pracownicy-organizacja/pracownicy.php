@@ -88,7 +88,6 @@
             echo("</table>")
 
 ?>
-<hr>
   </div>
 
   <div class="col-3 col-s-12">
