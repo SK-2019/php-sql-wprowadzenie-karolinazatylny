@@ -80,7 +80,7 @@ echo("<h2>".$sql."</h2>");
 <form id="mForm">
 <select id="mSelect">
 
-    <option value='1'>Henryk Sienkiewicz</option>
+    <option value='1'>Henryk SIenkiewicz</option>
     <option value='2'>Adam Mickiewicz</option>
     <option value='3'>Tolkien</option>
     <option value='4'>William Shakespeare</option>
@@ -88,10 +88,13 @@ echo("<h2>".$sql."</h2>");
     <option value='6'>Alexander Fredro</option>
     <option value='7'>Jan Brzechwa</option>
     <option value='8'>Kacper Korczak</option>
-    
+
 </select>
 </form>
-    <script type="text/javascript">
+<div id="tytul">
+</div>
+
+<script type="text/javascript">
 var mS = document.getElementById('mSelect');
 var mYesNo = document.getElementById('tytul');
 mS.onchange=function() {
@@ -120,7 +123,7 @@ mS.onchange=function() {
         mYesNo.innerHTML='<table><tr><td>Jak zmienić szkołę</td><td>Jak zmienić nauczyciela z zawodowych</td></tr></table>';
     }
     else {
-        mYesNo.innerHTML='';    
+        mYesNo.innerHTML='';
     }
 }
 </script>
