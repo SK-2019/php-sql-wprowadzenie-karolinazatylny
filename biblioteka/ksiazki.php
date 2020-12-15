@@ -75,7 +75,7 @@ echo("<h2>".$sql."</h2>");
 
         echo("</select>");
 ?>
-    echo("<h2>Wyświetalnie książek danych autorów</h2>");        
+    echo("<h2>"Wyświetalnie książek danych autorów"</h2>");        
 	      
 <form id="mForm">
 <select id="mSelect">
