@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <h1>K a r o l i n a   ★   Z a t y l n y</h1>
+  <h1>K a r o l i n a      Z a t y l n y</h1>
 </div>
 
 <div class="row">
