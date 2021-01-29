@@ -5,11 +5,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css/">
 </head>
 <body>
 
-  <h1>K a r o l i n a  ★  Z a t y l n y</h1>
+  <h1>K a r o l i n a   ★   Z a t y l n y</h1>
 </div>
 
 <div class="row">
