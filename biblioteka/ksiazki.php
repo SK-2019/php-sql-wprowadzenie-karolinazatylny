@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -74,60 +74,9 @@ echo("<h2>".$sql."</h2>");
             }
 
         echo("</select>");
+
 ?>
-<h2>Wyświetalnie książek danych autorów</h2>        
-	      
-<form id="mForm">
-<select id="mSelect">
-
-    <option value='1'>Henryk SIenkiewicz</option>
-    <option value='2'>Adam Mickiewicz</option>
-    <option value='3'>Tolkien</option>
-    <option value='4'>William Shakespeare</option>
-    <option value='5'>Rafał Kosik</option>
-    <option value='6'>Alexander Fredro</option>
-    <option value='7'>Jan Brzechwa</option>
-    <option value='8'>Kacper Korczak</option>
-
-</select>
-</form>
-<div id="tytul">
-</div>
-
-<script type="text/javascript">
-var mS = document.getElementById('mSelect');
-var mYesNo = document.getElementById('tytul');
-mS.onchange=function() {
-    if(mS.value==='1') {
-        mYesNo.innerHTML='<table><tr><td>Krzyżacy</td><td>Ogniem i mieczem</td></tr></table>';
-    }
-    else if(mS.value==='2') {
-        mYesNo.innerHTML='<table><tr><td>Pan Tadeusz</td></tr></table>';
-    }
-    else if(mS.value==='3') {
-        mYesNo.innerHTML='<table><tr><td>Hobbit</td><td>Władca Pierścieni</td></tr></table>';
-    }
-    else if(mS.value==='4') {
-        mYesNo.innerHTML='<table><tr><td>Romeo i Julia</td></tr></table>';
-    }
-    else if(mS.value==='5') {
-        mYesNo.innerHTML='<table><tr><td>Felix, Net i Nika</td></tr></table>';
-    }
-    else if(mS.value==='6') {
-        mYesNo.innerHTML='<table><tr><td>Zemsta</td></tr></table>';
-    }
-    else if(mS.value==='7') {
-        mYesNo.innerHTML='<table><tr><td>Akademia Pana Kleksa</td></tr></table>';
-    }
-    else if(mS.value==='8') {
-        mYesNo.innerHTML='<table><tr><td>Jak zmienić szkołę</td><td>Jak zmienić nauczyciela z zawodowych</td></tr></table>';
-    }
-    else {
-        mYesNo.innerHTML='';
-    }
-}
-</script>
-
+        
               </div>
             
               <div class="col-3 col-s-12">
