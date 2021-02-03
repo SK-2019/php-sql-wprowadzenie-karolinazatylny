@@ -33,7 +33,7 @@
   <div class="col-6 col-s-9">
     <h5>Data i czas</h5>
  <?php
-       require("assets/connect.php");
+       require("../assets/connect.php");
        $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
        echo("<h2>ZADANIE 1: $sql</h2>");
        $result = $conn->query($sql);
@@ -51,7 +51,7 @@
                }
    
            echo("</table>");
-           require("assets/connect.php");
+           require("../assets/connect.php");
            $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="serwis"';
            echo("<h2>ZADANIE 2: $sql</h2>");
            $result = $conn->query($sql);
@@ -70,7 +70,7 @@
                    }
        
             echo("</table>");
-            require("assets/connect.php");
+            require("../assets/connect.php");
             $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
             echo("<h2>ZADANIE 3: $sql</h2>");
             $result = $conn->query($sql);
@@ -82,7 +82,7 @@
                         echo("</tr>");
                    }
            echo("</table>");
-           require("assets/connect.php");
+           require("../assets/connect.php");
            $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="handel"';
            echo("<h2>ZADANIE 4: $sql</h2>");
            $result = $conn->query($sql);
@@ -94,7 +94,7 @@
                        echo("</tr>");
                   }
           echo("</table>");
-          require("assets/connect.php");
+          require("../assets/connect.php");
           $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie like "%a"';
           echo("<h2>ZADANIE 5: $sql</h2>");
           $result = $conn->query($sql);
@@ -107,7 +107,7 @@
                  }
          echo("</table>");
 
-          require("assets/connect.php");
+          require("../assets/connect.php");
           $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like "%a"';
           echo("<h2>ZADANIE 6: $sql</h2>");
           $result = $conn->query($sql);
@@ -120,7 +120,7 @@
                  }
          echo("</table>");
 
-        require("assets/connect.php");
+        require("../assets/connect.php");
         $sql='SELECT dzial, avg(YEAR(CURDATE()) - YEAR(data_urodzenia)) as a, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
           echo("<h2>ZADANIE 7: $sql</h2>");
           $result = $conn->query($sql);
@@ -135,7 +135,7 @@
                  }
          echo("</table>");
 
-         require("assets/connect.php");
+         require("../assets/connect.php");
          $sql='SELECT dzial, sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
            echo("<h2>ZADANIE 8: $sql</h2>");
            $result = $conn->query($sql);
@@ -150,7 +150,7 @@
                   }
           echo("</table>");
 
-          require("assets/connect.php");
+          require("../assets/connect.php");
          $sql='SELECT dzial, max(YEAR(CURDATE()) - YEAR(data_urodzenia)) as max, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
            echo("<h2>ZADANIE 9: $sql</h2>");
            $result = $conn->query($sql);
@@ -165,7 +165,7 @@
                   }
           echo("</table>");
 
-          require("assets/connect.php");
+          require("../assets/connect.php");
           $sql = ("SELECT MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial from pracownicy, organizacja WHERE id_org=dzial and (nazwa_dzial='handel' OR nazwa_dzial='serwis') GROUP BY dzial");
           echo("<h2>ZADANIE 10: $sql</h2>");
           $result=$conn->query($sql);
@@ -180,7 +180,7 @@
                       }
                   echo("</table>");
 
-          require("assets/connect.php");
+          require("../assets/connect.php");
           $sql='SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) as dni_zycia FROM pracownicy';
             echo("<h2>ZADANIE 12: $sql</h2>");
             $result = $conn->query($sql);
@@ -194,7 +194,7 @@
                    }
            echo("</table>");
 
-            require("assets/connect.php");
+            require("../assets/connect.php");
             $sql='SELECT * FROM pracownicy, organizacja WHERE (id_org=dzial) and (imie not like "%a") order by data_urodzenia ASC LIMIT 1';
               echo("<h2>ZADANIE 13: $sql</h2>");
               $result = $conn->query($sql);
@@ -222,11 +222,11 @@
              echo("<h1>Formatowanie dat </h1>");
 
 
-             require("assets/connect.php");
+             require("../assets/connect.php");
              $sql = ("SELECT *, DATE_FORMAT(data_urodzenia,'%W-%m-%Y') as format from pracownicy");
              echo("<h2>ZADANIE 1: $sql</h2>");
              $result=$conn->query($sql);
-             include("connect.php");
+             include("../assets/connect.php");
                      echo("<table border>");
                      echo("<th>Id_pracownicy</th>");
                      echo("<th>Imie</th>");
@@ -242,14 +242,14 @@
                      echo("</table>");
 
 
-             require("assets/connect.php");
+             require("../assets/connect.php");
              $sql1 = ("SET lc_time_names = 'pl_PL'");
              $sql2 = ("SELECT DATE_FORMAT(CURDATE(), '%W')as data");
              echo("<h2>ZADANIE 2: $sql2</h2>");
              $result=$conn->query($sql1);
              $result=$conn->query($sql2);
 
-             include("connect.php");
+             include("../assets/connect.php");
                      echo("<table border>");
                      echo("<th>Data</th>");
                      while($row=$result->fetch_assoc()) {
@@ -260,12 +260,12 @@
                      echo("</table>");
 
 
-             require("assets/connect.php");
+             require("../assets/connect.php");
              $sql1 = ("SET lc_time_names = 'pl_PL'");
              $sql2 = ("SELECT *, DATE_FORMAT(data_urodzenia,'%M-%W-%Y') as format from pracownicy");
              echo("<h2>ZADANIE 3: $sql2</h2>");
              $result=$conn->query($sql);
-             include("connect.php");
+             include("../assets/connect.php");
                      echo("<table border>");
                      echo("<th>Id_pracownicy</th>");
                      echo("<th>Imie</th>");
@@ -281,11 +281,11 @@
                      echo("</table>");
 
 
-            require("assets/connect.php");
+            require("../assets/connect.php");
             $sql2 = ("SELECT curtime(4)");
             echo("<h2>ZADANIE 4: $sql2</h2>");
             $result=$conn->query($sql2);
-            include("connect.php");
+            include("../assets/connect.php");
                       echo("<table border>");
                      echo("<th>Curtime(4)</th>");
                      while($row=$result->fetch_assoc()) {
@@ -296,13 +296,13 @@
                          echo("</table>");
 
                          
-            require("assets/connect.php");
+            require("../assets/connect.php");
             $sql1 = ("SET lc_time_names = 'pl_PL'");
             $sql2 = ("SELECT *, DATE_FORMAT(data_urodzenia,'%Y-%M-%W') as format from pracownicy");
             echo("<h2>ZADANIE 5: $sql2</h2>");
             $result=$conn->query($sql1);
             $result=$conn->query($sql2);                
-            include("../connect.php");
+            include("../assets/connect.php");
                     echo("<table border>");
                     echo("<th>Id_pracownicy</th>");
                     echo("<th>Imie</th>");
@@ -317,13 +317,13 @@
                             }
                         echo("</table>");
 
-            require("assets/connect.php");           
+            require("../assets/connect.php");           
              $sql1 = ("SET lc_time_names = 'pl_PL'");
             $sql2 = ("SELECT imie,  DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy");
            echo("<h2>ZADANIE 6: $sql2</h2>");
              $result=$conn->query($sql1);
              $result=$conn->query($sql2);
-               include("../connect.php");
+               include("../assets/connect.php");
                echo("<table border>");
                 echo("<th>Imie</th>");
               echo("<th>Dni</th>");
@@ -337,11 +337,11 @@
                  echo("</table>");
 
 
-                 require("assets/connect.php"); 
+                 require("../assets/connect.php");
                  $sql2 = ('SELECT DATE_FORMAT("2003-01-26", "%j") as dzienroku');
                  echo("<h2>ZADANIE 7: $sql2</h2>");
                  $result=$conn->query($sql2);
-                 include("../connect.php");
+                 include("../assets/connect.php");
                          echo("<table border>");
                          echo("<th>Dzień_roku</th>");
                          while($row=$result->fetch_assoc()) {
@@ -352,7 +352,7 @@
                          echo("</table>");
 
 
-          require("assets/connect.php");
+          require("../assets/connect.php");
           $sql1 = ("SET lc_time_names = 'pl_PL'");
           $sql2 = ("SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, imie, data_urodzenia FROM pracownicy ORDER BY CASE
                     WHEN dzien = 'Poniedziałek' THEN 1
@@ -366,7 +366,7 @@
         echo("<h2>ZADANIE 8: $sql2</h2>");
         $result=$conn->query($sql1);
         $result=$conn->query($sql2);
-        include("assets/connect.php");
+        include("../assets/connect.php");
             echo("<table border>");
             echo("<th>Dzień</th>");
             echo("<th>Imie</th>");
@@ -379,13 +379,13 @@
              echo("</table>");
 
 
-        require("assets/connect.php");
+        require("../assets/connect.php");
         $sql1 = ("SET lc_time_names = 'pl_PL'");
         $sql2 = ("SELECT Count(DATE_FORMAT(data_urodzenia,'%W')) as urodzeniwpon FROM pracownicy where DATE_FORMAT(data_urodzenia, '%W')='Poniedziałek'");
         echo("<h2>ZADANIE 9: $sql2</h2>");
         $result=$conn->query($sql1);
         $result=$conn->query($sql2);
-        include("assets/connect.php");
+        include("../assets/connect.php");
              echo("<table border>");
              echo("<th>Urodzeni_w_poniedziałek</th>");
                      while($row=$result->fetch_assoc()) {
@@ -395,7 +395,7 @@
                         }
                          echo("</table>");
 
-            require("assets/connect.php");
+            require("../assets/connect.php");
             $sql1 = ("SET lc_time_names = 'pl_PL'");
             $sql2=("SELECT Count(DATE_FORMAT(data_urodzenia,'%W')) as ilosc, DATE_FORMAT(data_urodzenia,'%W') as dzien FROM pracownicy group by dzien ORDER BY CASE WHEN dzien = 'Poniedziałek' THEN 1 WHEN dzien = 'Wtorek' THEN 2 WHEN dzien = 'Środa' THEN 3 WHEN dzien= 'Czwartek' THEN 4 WHEN dzien = 'Piątek' THEN 5 WHEN dzien = 'Sobota' THEN 6 WHEN dzien = 'Niedziela' THEN 7 END ASC");
             echo("<h2>ZADANIE 10: $sql2</h2>");
