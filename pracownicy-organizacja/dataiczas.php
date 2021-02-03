@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://aedmax24.pl/userdata/public/gfx/1128/Antystres-serce.jpg">
 </head>
 <body>
 
