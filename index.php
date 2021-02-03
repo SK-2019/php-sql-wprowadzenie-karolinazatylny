@@ -5,7 +5,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<title>Karolina Zatylny 2Ti gr.1</title>
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://findicons.com/files/icons/725/colobrush/256/pink_heart.png">
 </head>
 <body>
 
@@ -34,7 +36,7 @@
     <h5>Strona Główna</h5>
  <?php
 
-require_once('connect.php');
+require_once("../assets/connect.php");
 echo("<h2>Tabela Wszystkich Pracowników:</h2>");
 $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org';
 $result = $conn->query($sql);
@@ -53,7 +55,7 @@ $result = $conn->query($sql);
             }
         echo("</table>");
 
-require_once('connect.php');
+require_once("../assets/connect.php");
 echo("<h2>Tabela Funkcji Agregujących:</h2>");
 $result = $conn->query('SELECT dzial, sum(zarobki) as suma, avg(zarobki) as srednia, min(zarobki) as min, max(zarobki) as max, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org group by dzial');
             echo("<table border=1>"); 
