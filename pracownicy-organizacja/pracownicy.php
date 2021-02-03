@@ -5,7 +5,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<title>Karolina Zatylny 2Ti gr.1</title>
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://findicons.com/files/icons/725/colobrush/256/pink_heart.png">
 </head>
 <body>
 
@@ -34,7 +36,7 @@
     <h5>Pracownicy</h5>
  <?php
 
-    require("../connect.php");
+    require("../assets/connect.php");
     $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=2 AND dzial=id_org';
     echo("<h2>ZADANIE 1: $sql</h2>");
     $result = $conn->query($sql);
@@ -51,7 +53,7 @@
             }
 
         echo("</table>");
-    require("../connect.php");
+    require("../assets/connect.php");
     $sql='SELECT * FROM pracownicy, organizacja where dzial=id_org AND (dzial=1 or dzial=2)';
     echo("<h2>ZADANIE 2: $sql</h2>");  
     $result = $conn->query($sql); 
@@ -69,7 +71,7 @@
     
 
         echo("</table>");
-    require("../connect.php");
+    require("../assets/connect.php");
     $sql='SELECT * FROM pracownicy, organizacja WHERE zarobki<30 AND dzial=id_org';
     echo("<h2>ZADANIE 3: $sql</h2>");  
     $result = $conn->query($sql); 
