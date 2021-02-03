@@ -5,7 +5,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<title>Karolina Zatylny 2Ti gr.1</title>
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://findicons.com/files/icons/725/colobrush/256/pink_heart.png">
 </head>
 <body>
 
@@ -34,7 +36,7 @@
     <h5>Książki</h5>
  <?php
   
- require_once('../connect.php');
+ require_once("../assets/connect.php");
 $sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul WHERE biblAutor_id=biblAutor.id and biblTytul_id=biblTytul.id';
 echo("<h2>".$sql."</h2>");
 
@@ -51,7 +53,7 @@ echo("<h2>".$sql."</h2>");
 
         echo("</table>");
   
-   require_once('../connect.php');
+   require_once("../assets/connect.php");
 $sql = 'SELECT * FROM biblAutor';
 echo("<h2>".$sql."</h2>");
 
