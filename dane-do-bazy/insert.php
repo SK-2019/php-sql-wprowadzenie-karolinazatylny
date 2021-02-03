@@ -5,7 +5,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<title>Karolina Zatylny 2Ti gr.1</title>
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://findicons.com/files/icons/725/colobrush/256/pink_heart.png">
 </head>
 <body>
 

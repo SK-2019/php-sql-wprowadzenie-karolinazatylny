@@ -1,7 +1,14 @@
   
 <html>
         <head>
-        <link rel="stylesheet" href="/assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+<title>Karolina Zatylny 2Ti gr.1</title>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="https://findicons.com/files/icons/725/colobrush/256/pink_heart.png">
+</head>
         </head>
 <div class="nav"
         <h3>
@@ -21,7 +28,7 @@
 </html> 
 
 <?php
-include("../connect.php");
+include("../assets/connect.php");
 echo("<li> imie: ".$_POST['firstname']."</li>");
 echo("<li> nazwisko: ".$_POST['lastname']."</li>");
 echo("<li> miasto: ".$_POST['city']."</li>");
