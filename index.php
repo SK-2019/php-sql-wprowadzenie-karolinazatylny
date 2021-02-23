@@ -36,6 +36,25 @@
     <h5>Strona Główna</h5>
  <?php
 
+//require_once ("config.php");
+ //require_once (__DIR__."/vendor/autoload.php");
+//require_once ("vendor/autoload.php");
+
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+//$dotenv->load();
+
+/*$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);*/
+/*wors only with: createUnsafeImmutable(__DIR__);*/
+
+//$secret_key = getenv("SECRET_KEY");
+//echo ("<li> new: ". $secret_key);
+
+// echo("<li> ENV key: ".$_ENV['SECRET_KEY']);
+// echo("<li> ENV pass: ".$_ENV['PASSWORD']);
+// echo("<li> SERVER: ".$_SERVER['HTTP_HOST']);
+echo("<li> SERVER passsword: ".$_SERVER['pass']);
+
+
 require_once("assets/connect.php");
 echo("<h2>Tabela Wszystkich Pracowników:</h2>");
 $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org';
