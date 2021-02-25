@@ -40,7 +40,7 @@ $hostname = $_SERVER['HTTP_HOST'];
 
 if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }    
-    echo("<li> SERVER password: ".$_SERVER['password']);
+    echo("<li> SERVER password: ".$_SERVER['pass']);
 
 require_once("assets/connect.php");
 echo("<h2>Tabela Wszystkich Pracowników:</h2>");
