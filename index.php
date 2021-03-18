@@ -42,6 +42,9 @@ if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }    
     echo("<li> SERVER password: ".$_SERVER['pass']);
 
+ $d=strtotime("now");
+    echo"<li>".date("Y-m-d h:i:sa",$d)."<br>";
+
 require_once("assets/connect.php");
 echo("<h2>Tabela Wszystkich Pracowników:</h2>");
 $sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org';
