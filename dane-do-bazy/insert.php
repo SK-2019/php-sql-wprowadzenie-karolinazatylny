@@ -42,14 +42,10 @@ echo ("<li>". $_POST['dzial']);
 echo ("<li>". $_POST['zarobki']);
 echo ("<li>". $_POST['data_urodzenia']);
 
-//$servername = "mysql-karolinazatylny.alwaysdata.net";
-//$username = "217224";
-//$password = "karolcia9";
-//$dbname = "karolinazatylny_123";
-$servername = "db";
-$username = "root";
-$password = "root";
-$dbname = "tom";
+$servername = "mysql-karolinazatylny.alwaysdata.net";
+$username = "217224";
+$password = "karolcia9";
+$dbname = "karolinazatylny_123";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
