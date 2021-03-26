@@ -14,7 +14,6 @@
   width: 30%;
   height: 20%;
 }
-
 .nav {
     background-color: #ff7474;
     padding: 2px;
@@ -22,7 +21,6 @@
     width: 20%;
     height: 30%;
   }
-
 .zad1{
 display: flex;
 justify-content: flex-start;
