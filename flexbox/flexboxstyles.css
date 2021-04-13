@@ -1,6 +1,6 @@
 .container {
   background-color: #ffe6e6;
-  padding: 4px;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -10,7 +10,7 @@
 }
 .box {
   background-color: #fdaaaa;
-  padding: 4px;
+  padding: 5px;
   width: 30%;
   height: 20%;
 }
@@ -28,8 +28,8 @@
     background-color: #ff7474;
     padding: 2px;
     list-style: none;
-    width: 45%;
-    height: 50%;
+    width: 50%;
+    height: 60%;
   }
 
 .zad1{
@@ -94,7 +94,7 @@ align-items: flex-start;
 }
 
 .space {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .rzad{
@@ -113,17 +113,17 @@ align-items: flex-start;
 
 .link{
   display: inline-block;
-  padding: 4px;
+  padding: 5px;
   background-color: #ff7474;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
   transition: 0.2s;
 }
 
 .link2{
   display: inline-block;
-  padding: 4px;
+  padding: 5px;
   background-color: #ff7474;
   text-decoration: none;
   font-size: 15px;
@@ -156,21 +156,21 @@ align-items: flex-start;
 .link:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 25px;
+  font-size: 15px;
 }
 .link2:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 25px;
+  font-size: 15px;
 }
 .link3:hover{
   background-color: #ffe6e6;
   color: #ff7474;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 15px;
 }
 .link4:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 25px;
+  font-size: 15px;
 }
