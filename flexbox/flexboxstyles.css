@@ -160,7 +160,7 @@ align-items: flex-start;
   background-color: #ffe6e6;
   color: #ff7474;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 10px;
 }
@@ -188,5 +188,6 @@ align-items: flex-start;
   color: #ff7474;
   text-decoration: none;
   border-bottom-right-radius: 13px;
-  font-size: 10px;
+  border-top-left-radius: 13px;
+  font-size: 12px;
 }
