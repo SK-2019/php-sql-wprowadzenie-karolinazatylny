@@ -153,7 +153,7 @@ align-items: flex-start;
   background-color: #ff7474;
   text-decoration: none;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   transition: 0.5s;
 }
 .link:hover{
@@ -187,7 +187,6 @@ align-items: flex-start;
   background-color: #ffe6e6;
   color: #ff7474;
   text-decoration: none;
-  border-bottom-right-radius: 13px;
-  border-top-left-radius: 13px;
+  border-right-width: 5px;
   font-size: 12px;
 }
