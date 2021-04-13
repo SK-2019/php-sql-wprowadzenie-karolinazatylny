@@ -87,3 +87,18 @@ align-items: flex-start;
 .space {
   margin-left: 10px;
 }
+
+.menu {
+  display: block;
+  padding: 1rem;
+  background-color: rgb(197, 129, 177);
+  margin: 3px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(71, 71, 71);
+  border-width: 5px;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.2%;
+  width: 60px;
+  }
