@@ -112,13 +112,14 @@ align-items: flex-start;
 }
 
 .link{
-  display: inline-block;
-  padding: 5px;
+  display: block;
+  padding: 1px;
   background-color: #ff7474;
   text-decoration: none;
   font-size: 15px;
   text-align: center;
-  transition: 0.2s;
+  transition: 0.4s;
+  border-radius: 2%;
 }
 
 .link2{
@@ -133,7 +134,7 @@ align-items: flex-start;
 
 .link3{
   display: inline-block;
-  padding: 5px;
+  padding: 1px;
   margin-bottom: 3px;
   width: 60%;
   background-color: #ff7474;
@@ -147,7 +148,7 @@ align-items: flex-start;
   padding: 5px;
   margin-bottom: 3px;
   width: 60%;
-  background-color: #ff7474;
+  background-color: #db9a9a;
   text-decoration: none;
   font-size: 15px;
   text-align: center;
@@ -156,21 +157,25 @@ align-items: flex-start;
 .link:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 15px;
+  text-decoration: none;
+  font-size: 10px;
 }
 .link2:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 15px;
+  text-decoration: none;
+  font-size: 10px;
 }
 .link3:hover{
   background-color: #ffe6e6;
   color: #ff7474;
+  text-decoration: none;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .link4:hover{
   background-color: #ffe6e6;
   color: #ff7474;
-  font-size: 15px;
+  text-decoration: none;
+  font-size: 10px;
 }
