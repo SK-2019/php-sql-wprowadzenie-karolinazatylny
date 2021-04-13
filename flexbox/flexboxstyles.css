@@ -147,7 +147,7 @@ align-items: flex-start;
 }
 .link4{
   display:inline-block;
-  padding: 1px;
+  padding: 5px;
   margin-bottom: 3px;
   width: 40%;
   background-color: #ff7474;
@@ -160,7 +160,7 @@ align-items: flex-start;
   background-color: #ffe6e6;
   color: #ff7474;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 10px;
 }
