@@ -148,6 +148,7 @@ align-items: flex-start;
 .link4{
   display:inline-block;
   padding: 5px;
+  padding-right: 50%;
   margin-bottom: 3px;
   width: 40%;
   background-color: #ff7474;
