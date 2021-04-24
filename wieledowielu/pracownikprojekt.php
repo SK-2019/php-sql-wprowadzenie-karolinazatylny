@@ -55,7 +55,7 @@
      
         require("../assets/connect.php");
         $sql='SELECT * FROM projekt';
-        echo("<h2>PRZYKŁAD 2: $sql</h2>");
+        echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>ID</th>");
