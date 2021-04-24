@@ -55,15 +55,14 @@
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
-            echo("<th>ID_fryzjera</th>");
-            echo("<th>Imie_fryzjera/th>");
+            echo("<th>ID</th>");
             echo("<th>Nazwisko_fryzjera</th>");
             echo("<th>ID_klienta</th>");
             echo("<th>Imie_klienta</th>");
             echo("<th>Nazwisko_klienta</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
-                    echo("<td>".$row["id_fryzjer"]."</td><td>".$row["fryzjer"]."</td><td>".$row["id_klient"]."</td><td>".$row["klient"]."</td>");
+                    echo("<td>".$row["id_fryzjer"]."</td><td>".$row["nazwisko"]."</td><td>".$row["id_klient"]."</td><td>".$row["klient"]."</td>");
                          echo("</tr>");
              }            
          echo("</table>");
