@@ -29,7 +29,7 @@
        echo("<th>Nazwisko</th>");
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
-               echo("<td>" .$row["id_fryzjer"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["nazwisko"]. "</td>");
+               echo("<td>" .$row["id_fryzjer"]. "</td><td>" .$row["imie_f"]. "</td><td>" .$row["nazwisko_f"]. "</td>");
 
                echo("</tr>");
            }
@@ -45,7 +45,7 @@
                 echo("<th>Nazwisko</th>");
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
-                   echo("<td>" .$row["id_klient"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["nazwisko"]. "</td>");
+                   echo("<td>" .$row["id_klient"]. "</td><td>" .$row["imie_k"]. "</td><td>" .$row["nazwisko_k"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -61,7 +61,7 @@
             echo("<th>Nazwisko_klienta</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
-                    echo("<td>".$row["id_fryzjer"]."</td><td>".$row["nazwisko"]."</td><td>".$row["id_klient"]."</td><td>".$row["nazwisko"]."</td>");
+                    echo("<td>".$row["id_fryzjer"]."</td><td>" .$row["imie_f"]."</td><td>".$row["nazwisko_f"]."</td><td>".$row["id_klient"]."</td><td>".$row["imie_k"]."</td><td>".$row["nazwisko_k"]."</td>");
                          echo("</tr>");
              }            
          echo("</table>");
