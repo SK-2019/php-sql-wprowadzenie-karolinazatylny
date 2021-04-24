@@ -36,10 +36,11 @@
   <div class="col-6 col-s-9">
     <h5>Strona Główna</h5>
  <?php
+ 
+ $hostname = $_SERVER['HTTP_HOST'];
 
 if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }    
-    echo("<li> SERVER password: ".$_SERVER['pass']);
     $d=strtotime("now");
     echo"<li>".date("Y-m-d h:i:sa",$d)."<br>";
 
