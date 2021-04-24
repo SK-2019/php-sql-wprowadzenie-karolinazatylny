@@ -56,8 +56,10 @@
         $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>ID fryzjera</th>");
+            echo("<th>Imie_fryzjera</th>");
             echo("<th>Nazwisko_fryzjera</th>");
             echo("<th>ID_klienta</th>");
+            echo("<th>Imie_klienta</th>");
             echo("<th>Nazwisko_klienta</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
