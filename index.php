@@ -13,7 +13,7 @@
 
 <?php
       include("assets/header.php");
-      include("../assets/menu.php");
+      include("assets/menu.php");
 ?>
   <div class="col-6 col-s-9">
     <h5>Strona Główna</h5>
