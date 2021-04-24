@@ -37,8 +37,6 @@
     <h5>Strona Główna</h5>
  <?php
 
-$hostname = $_SERVER['HTTP_HOST'];
-
 if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }    
     echo("<li> SERVER password: ".$_SERVER['pass']);
