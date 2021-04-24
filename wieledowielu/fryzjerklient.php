@@ -45,7 +45,7 @@
                 echo("<th>Nazwisko</th>");
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
-                   echo("<td>" .$row["klient"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["nazwisko"]. "</td>");
+                   echo("<td>" .$row["id_klient"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["nazwisko"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -55,12 +55,12 @@
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
-            echo("<th>ID Fryzjera</th>");
-            echo("<th>Imie Fryzjera/th>");
-            echo("<th>Nazwisko Fryzjera</th>");
-            echo("<th>ID Klienta</th>");
-            echo("<th>Imie Klienta</th>");
-            echo("<th>Nazwisko Klienta</th>");
+            echo("<th>ID_fryzjera</th>");
+            echo("<th>Imie_fryzjera/th>");
+            echo("<th>Nazwisko_fryzjera</th>");
+            echo("<th>ID_klienta</th>");
+            echo("<th>Imie_klienta</th>");
+            echo("<th>Nazwisko_klienta</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
                     echo("<td>".$row["id_fryzjer"]."</td><td>".$row["fryzjer"]."</td><td>".$row["id_klient"]."</td><td>".$row["klient"]."</td>");
