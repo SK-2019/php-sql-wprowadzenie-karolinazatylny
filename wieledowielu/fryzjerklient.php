@@ -56,11 +56,11 @@
         $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>ID fryzjera</th>");
-            echo("<th>Imie_fryzjera</th>");
-            echo("<th>Nazwisko_fryzjera</th>");
-            echo("<th>ID_klienta</th>");
-            echo("<th>Imie_klienta</th>");
-            echo("<th>Nazwisko_klienta</th>");
+            echo("<th>Imie fryzjera</th>");
+            echo("<th>Nazwisko fryzjera</th>");
+            echo("<th>ID klienta</th>");
+            echo("<th>Imie klienta</th>");
+            echo("<th>Nazwisko klienta</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
                     echo("<td>".$row["id_fryzjer"]."</td><td>" .$row["imie_f"]."</td><td>".$row["nazwisko_f"]."</td><td>".$row["id_klient"]."</td><td>".$row["imie_k"]."</td><td>".$row["nazwisko_k"]."</td>");
