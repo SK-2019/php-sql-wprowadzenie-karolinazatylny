@@ -17,7 +17,7 @@
       ?>
 
   <div class="col-6 col-s-9">
-    <h5>Pracownik - projekt</h5>
+    <h5>Lekarz - pacjent</h5>
  <?php
    require("../assets/connect.php");
    $sql='SELECT * FROM lekarz';
