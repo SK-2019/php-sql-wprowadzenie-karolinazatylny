@@ -87,9 +87,9 @@ body {
   }
   
   .menu li {
-    padding: 6px;
-    margin-bottom: 5px;
-    border-radius: 9px;
+    padding: 5px;
+    margin-bottom: 4px;
+    border-radius: 7px;
     background-color :#eac6c6;
     color: #4d4545;
     box-shadow: 0 1px 3px rgba(102, 102, 102, 0.616), 0 1px 2px rgba(102, 102, 102, 0.616);
@@ -183,6 +183,6 @@ tr:nth-child(even){background-color:#eecbcb}
 tr:hover{background-color:#e7b9b9;
 }
 li {
-    margin-bottom:10px; 
+    margin-bottom:9px; 
     margin-top:10px; 
   }
