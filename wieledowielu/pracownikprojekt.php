@@ -53,7 +53,7 @@
                    echo("<tr>");
                    echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["wynagrodzenie"]. "</td><td>" .$row["dataUrodzenia"]. "</td>");
                    echo("<td><form action='delete2pp.php' method=POST>");
-                   echo("<input type name='id' value='".$row['ppid']."'hidden>");
+                   echo("<input type name='id' value='".$row['id_pracownik']."'hidden>");
                    echo("<input type='submit' value='Usuń'>");
                   echo("</form></td>");   
                    echo("</tr>");    
@@ -71,7 +71,7 @@
                     echo("<tr>");
                     echo("<td>" .$row["id_projekt"]. "</td><td>" .$row["nazwa"]. "</td>");
                     echo("<td><form action='delete3pp.php' method=POST>");
-                    echo("<input type name='id' value='".$row['ppid']."'hidden>");
+                    echo("<input type name='id' value='".$row['id_projekt']."'hidden>");
                     echo("<input type='submit' value='Usuń'>");
                    echo("</form></td>");   
                          echo("</tr>");

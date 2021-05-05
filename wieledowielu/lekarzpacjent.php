@@ -31,7 +31,7 @@
                echo("<tr>");
                echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie_l"]. "</td><td>" .$row["nazwisko_l"]. "</td>");
                echo("<td><form action='delete3lp.php' method=POST>");
-               echo("<input type name='id' value='".$row['lpid']."'hidden>");
+               echo("<input type name='id' value='".$row['id_lekarz']."'hidden>");
                echo("<input type='submit' value='Usuń'>");
               echo("</form></td>");  
                echo("</tr>");
@@ -50,7 +50,7 @@
                    echo("<tr>");
                    echo("<td>" .$row["id_pacjent"]. "</td><td>" .$row["imie_p"]. "</td><td>" .$row["nazwisko_p"]. "</td>");
                    echo("<td><form action='delete2lp.php' method=POST>");
-                   echo("<input type name='id' value='".$row['lpid']."'hidden>");
+                   echo("<input type name='id' value='".$row['id_pacjent']."'hidden>");
                    echo("<input type='submit' value='Usuń'>");
                   echo("</form></td>");    
                         echo("</tr>");

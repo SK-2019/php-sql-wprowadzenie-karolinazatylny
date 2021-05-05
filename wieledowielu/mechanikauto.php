@@ -31,7 +31,7 @@
                echo("<tr>");
                echo("<td>" .$row["id_mechanik"]. "</td><td>" .$row["imie_m"]. "</td><td>" .$row["nazwisko_m"]. "</td>");
                echo("<td><form action='delete3ma.php' method=POST>");
-               echo("<input type name='id' value='".$row['maid']."'hidden>");
+               echo("<input type name='id' value='".$row['id_mechanik']."'hidden>");
                echo("<input type='submit' value='Usuń'>");
               echo("</form></td>");  
                echo("</tr>");
@@ -50,7 +50,7 @@
                    echo("<tr>");
                    echo("<td>" .$row["id_samochod"]. "</td><td>" .$row["marka"]. "</td><td>" .$row["rejestracja"]. "</td>");
                    echo("<td><form action='delete2ma.php' method=POST>");
-                   echo("<input type name='id' value='".$row['maid']."'hidden>");
+                   echo("<input type name='id' value='".$row['id_samochod']."'hidden>");
                    echo("<input type='submit' value='Usuń'>");
                   echo("</form></td>");  
                         echo("</tr>");
