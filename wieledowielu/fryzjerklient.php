@@ -30,7 +30,10 @@
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
                echo("<td>" .$row["id_fryzjer"]. "</td><td>" .$row["imie_f"]. "</td><td>" .$row["nazwisko_f"]. "</td>");
-
+               echo("<td><form action='delete3fk.php' method=POST>");
+               echo("<input type name='id' value='".$row['fkid']."'hidden>");
+               echo("<input type='submit' value='Usuń'>");
+              echo("</form></td>");   
                echo("</tr>");
            }
        echo("</table>");
@@ -46,12 +49,16 @@
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
                    echo("<td>" .$row["id_klient"]. "</td><td>" .$row["imie_k"]. "</td><td>" .$row["nazwisko_k"]. "</td>");
+                   echo("<td><form action='delete2fk.php' method=POST>");
+                   echo("<input type name='id' value='".$row['fkid']."'hidden>");
+                   echo("<input type='submit' value='Usuń'>");
+                  echo("</form></td>");   
                         echo("</tr>");
             }            
         echo("</table>");
      
         require("../assets/connect.php");
-        $sql='SELECT * FROM fryzjer, klient, fryzjer_klient WHERE id_fryzjer=fryzjerID AND id_klient=klientID';
+        $sql='SELECT *, fryzjer_klient.id as fkid FROM fryzjer, klient, fryzjer_klient WHERE id_fryzjer=fryzjerID AND id_klient=klientID';
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
@@ -64,7 +71,11 @@
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
                     echo("<td>".$row["id_fryzjer"]."</td><td>" .$row["imie_f"]."</td><td>".$row["nazwisko_f"]."</td><td>".$row["id_klient"]."</td><td>".$row["imie_k"]."</td><td>".$row["nazwisko_k"]."</td>");
-                         echo("</tr>");
+                    echo("<td><form action='delete1fk.php' method=POST>");
+                    echo("<input type name='id' value='".$row['fkid']."'hidden>");
+                    echo("<input type='submit' value='Usuń'>");
+                   echo("</form></td>");       
+                    echo("</tr>");
              }            
          echo("</table>");
 
