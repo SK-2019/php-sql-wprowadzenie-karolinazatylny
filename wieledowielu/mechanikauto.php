@@ -58,7 +58,7 @@
         echo("</table>");
      
         require("../assets/connect.php");
-        $sql='SELECT *, mechanik_auto.id as maid FROM mechanik, samochod, mechanik_samochod WHERE id_mechanik=mechanikID AND id_samochod=samochodID';
+        $sql='SELECT *, mechanik_samochod.id as maid FROM mechanik, samochod, mechanik_samochod WHERE id_mechanik=mechanikID AND id_samochod=samochodID';
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
