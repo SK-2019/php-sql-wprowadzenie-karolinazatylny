@@ -30,7 +30,10 @@
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
                echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie_l"]. "</td><td>" .$row["nazwisko_l"]. "</td>");
-
+               echo("<td><form action='delete3lp.php' method=POST>");
+               echo("<input type name='id' value='".$row['lpid']."'hidden>");
+               echo("<input type='submit' value='Usuń'>");
+              echo("</form></td>");  
                echo("</tr>");
            }
        echo("</table>");
@@ -46,12 +49,16 @@
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
                    echo("<td>" .$row["id_pacjent"]. "</td><td>" .$row["imie_p"]. "</td><td>" .$row["nazwisko_p"]. "</td>");
+                   echo("<td><form action='delete2lp.php' method=POST>");
+                   echo("<input type name='id' value='".$row['lpid']."'hidden>");
+                   echo("<input type='submit' value='Usuń'>");
+                  echo("</form></td>");    
                         echo("</tr>");
             }            
         echo("</table>");
      
         require("../assets/connect.php");
-        $sql='SELECT * FROM lekarz, pacjent, lekarz_pacjent WHERE id_lekarz=lekarzID AND id_pacjent=pacjentID';
+        $sql='SELECT *, lekarz_pacjent.id as lpid FROM lekarz, pacjent, lekarz_pacjent WHERE id_lekarz=lekarzID AND id_pacjent=pacjentID';
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
@@ -64,7 +71,11 @@
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
                     echo("<td>".$row["id_lekarz"]."</td><td>" .$row["imie_l"]."</td><td>".$row["nazwisko_l"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie_p"]."</td><td>".$row["nazwisko_p"]."</td>");
-                         echo("</tr>");
+                    echo("<td><form action='delete1lp.php' method=POST>");
+                    echo("<input type name='id' value='".$row['lpid']."'hidden>");
+                    echo("<input type='submit' value='Usuń'>");
+                   echo("</form></td>");    
+                    echo("</tr>");
              }            
          echo("</table>");
 
