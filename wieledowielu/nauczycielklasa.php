@@ -62,7 +62,7 @@
             echo("<th>Liczba uczniów</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
-                    echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_n"]. "</td><td>" .$row["nazwisko_n"]. "</td>");
+                    echo("<td>".$row["id_nauczyciel"]."</td><td>" .$row["imie_n"]."</td><td>".$row["nazwisko_n"]."</td><td>".$row["id_klasa"]."</td><td>".$row["nazwa_klasy"]."</td><td>".$row["liczba_uczniów"]."</td>");
                     echo("<td><form action='delete1kn.php' method=POST>");
                           echo("<input type name='id' value='".$row['nkid']."'hidden>");
                           echo("<input type='submit' value='Usuń'>");
