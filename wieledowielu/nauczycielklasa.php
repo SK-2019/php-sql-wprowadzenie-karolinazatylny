@@ -30,6 +30,10 @@
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
                echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_n"]. "</td><td>" .$row["nazwisko_n"]. "</td>");
+               echo("<td><form action='delete3kn.php' method=POST>");
+               echo("<input type name='id' value='".$row['id_nauczyciel']."'hidden>");
+               echo("<input type='submit' value='Usuń'>");
+              echo("</form></td>");
                echo("</tr>");   
            }
        echo("</table>");
@@ -45,6 +49,10 @@
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
                    echo("<td>" .$row["id_klasa"]. "</td><td>" .$row["nazwa_klasy"]. "</td><td>" .$row["liczba_uczniów"]. "</td>");
+                   echo("<td><form action='delete2kn.php' method=POST>");
+                   echo("<input type name='id' value='".$row['id_klasa']."'hidden>");
+                   echo("<input type='submit' value='Usuń'>");
+                  echo("</form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
