@@ -30,7 +30,10 @@
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
                echo("<td>" .$row["id_mechanik"]. "</td><td>" .$row["imie_m"]. "</td><td>" .$row["nazwisko_m"]. "</td>");
-
+               echo("<td><form action='delete3ma.php' method=POST>");
+               echo("<input type name='id' value='".$row['maid']."'hidden>");
+               echo("<input type='submit' value='Usuń'>");
+              echo("</form></td>");  
                echo("</tr>");
            }
        echo("</table>");
@@ -46,12 +49,16 @@
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
                    echo("<td>" .$row["id_samochod"]. "</td><td>" .$row["marka"]. "</td><td>" .$row["rejestracja"]. "</td>");
+                   echo("<td><form action='delete2ma.php' method=POST>");
+                   echo("<input type name='id' value='".$row['maid']."'hidden>");
+                   echo("<input type='submit' value='Usuń'>");
+                  echo("</form></td>");  
                         echo("</tr>");
             }            
         echo("</table>");
      
         require("../assets/connect.php");
-        $sql='SELECT * FROM mechanik, samochod, mechanik_samochod WHERE id_mechanik=mechanikID AND id_samochod=samochodID';
+        $sql='SELECT *, mechanik_auto.id as maid FROM mechanik, samochod, mechanik_samochod WHERE id_mechanik=mechanikID AND id_samochod=samochodID';
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
@@ -64,7 +71,11 @@
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
                     echo("<td>".$row["id_mechanik"]."</td><td>" .$row["imie_m"]."</td><td>".$row["nazwisko_m"]."</td><td>".$row["id_samochod"]."</td><td>".$row["marka"]."</td><td>".$row["rejestracja"]."</td>");
-                         echo("</tr>");
+                    echo("<td><form action='delete1ma.php' method=POST>");
+                    echo("<input type name='id' value='".$row['maid']."'hidden>");
+                    echo("<input type='submit' value='Usuń'>");
+                   echo("</form></td>");       
+                    echo("</tr>");
              }            
          echo("</table>");
 
