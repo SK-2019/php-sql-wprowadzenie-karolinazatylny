@@ -30,8 +30,7 @@
            while($row=$result->fetch_assoc()){ 
                echo("<tr>");
                echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_n"]. "</td><td>" .$row["nazwisko_n"]. "</td>");
-
-               echo("</tr>");
+               echo("</tr>");   
            }
        echo("</table>");
 
@@ -51,7 +50,7 @@
         echo("</table>");
      
         require("../assets/connect.php");
-        $sql='SELECT * FROM nauczyciel, klasa, nauczyciel_klasa WHERE id_nauczyciel=nauczycielID AND id_klasa=klasaID';
+        $sql='SELECT *, nauczyciel_klasa.id as nkid FROM nauczyciel, klasa, nauczyciel_klasa WHERE id_nauczyciel=nauczycielID AND id_klasa=klasaID';
         echo("<h2>PRZYKŁAD 3: $sql</h2>");
         $result = $conn->query($sql);
             echo("<table border=1>");
@@ -63,8 +62,12 @@
             echo("<th>Liczba uczniów</th>");
                 while($row=$result->fetch_assoc()){ 
                     echo("<tr>");
-                    echo("<td>".$row["id_nauczyciel"]."</td><td>" .$row["imie_n"]."</td><td>".$row["nazwisko_n"]."</td><td>".$row["id_klasa"]."</td><td>".$row["nazwa_klasy"]."</td><td>".$row["liczba_uczniów"]."</td>");
-                         echo("</tr>");
+                    echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_n"]. "</td><td>" .$row["nazwisko_n"]. "</td>");
+                    echo("<td><form action='delete1kn.php' method=POST>");
+                          echo("<input type name='id' value='".$row['nkid']."'hidden>");
+                          echo("<input type='submit' value='Usuń'>");
+                         echo("</form></td>");
+                    echo("</tr>");   
              }            
          echo("</table>");
 
