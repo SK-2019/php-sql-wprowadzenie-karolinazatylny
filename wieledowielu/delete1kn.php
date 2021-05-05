@@ -1,6 +1,6 @@
 <?php
 require("../assets/connect.php");
-$sql = "DELETE FROM klasa_nauczyciel where id='".$_POST['id']."'";
+$sql = "DELETE FROM nauczyciel_klasa where id='".$_POST['id']."'";
 $conn->query($sql);
 header("location:nauczycielklasa.php");
 ?>
