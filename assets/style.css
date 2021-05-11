@@ -186,3 +186,21 @@ li {
     margin-bottom:9px; 
     margin-top:10px; 
   }
+.post-content {
+    padding: 20px;
+}
+
+.post-content .body-text {
+  line-height: 1.6;
+}
+
+.post-content div.npf_row, .post div.npf_row, body div.npf_row {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 0;
+  overflow: hidden;
+}
