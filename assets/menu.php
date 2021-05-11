@@ -13,6 +13,7 @@
       <li><a class="link" href="/dane-do-bazy/danedobazy.php"><b>DANE DO BAZY</b></a></li>
       <li><a class="link" href="/biblioteka/ksiazki.php"><b>KSIĄŻKI</b></a></li>
       <li><a class="link" href="/flexbox/flexbox.html"><b>FLEXBOX</b></a></li>
+      <li><a class="link" href="/galeria.html"><b>GALERIA</b></a></li>
         </h6>
       <h2>WIELE DO WIELU:</h2>
         <h6>
