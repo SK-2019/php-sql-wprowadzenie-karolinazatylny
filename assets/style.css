@@ -193,3 +193,7 @@ li {
 .row {
     background-color: rgb(235, 235, 235);
   }
+
+.obr{
+  scale: 10px;
+}
